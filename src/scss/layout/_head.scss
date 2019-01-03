@@ -1,0 +1,257 @@
+.page-header {
+    background-image: url(images/Background.png);
+    background-repeat: no-repeat;
+    background-size: 2049px 1360px;
+    //height: 100vh;
+}
+
+.head {
+    padding: 3rem;
+    display: flex;
+
+    &_leftside {
+        padding-top: 5rem;
+        padding-left: 10vw;
+        // display: flex;
+
+        .img_box {
+            overflow: hidden;
+
+            .img-top {
+                width: 80%;
+                background-color: transparent;
+                opacity: 0;
+            }
+
+        }
+
+        
+
+        .middle-contents {
+            position: absolute;
+            top: 22vh;
+            left: 35vw;
+
+            .box1 {
+                width: 40%;
+                //height: 400px;
+                margin: 0 0 2% 0;
+                overflow: hidden;
+
+                .title-h1 {
+                    width: 100%;
+                    color: #ff0000;
+                    font-size: 70px;
+                    // width: inherit;
+                    //height: inherit;
+                    //line-height: 200px;
+                    //font-size: 2.5em;
+                    text-align: center;
+                    background-color: transparent;
+                    opacity: 0;
+                }
+            }
+
+            .title-small {
+                padding: 2rem;
+                position: absolute;
+                left: 6vw;
+
+                p {
+                    width: 16vw;
+                    opacity: 0;
+                    font-family: 'Montserrat', sans-serif;
+                }
+
+                .cb-h1 {
+                    display: flex;
+                    padding-left: 10vw;
+                    // flex-direction: row-reverse;
+                    //padding: 3rem;
+
+                    .p_chapters {
+                        height: 12vh;
+                        color: #ff0000;
+                        writing-mode: vertical-rl;
+                        text-orientation: mixed;
+                        text-align: right;
+                    }
+
+                    .chapblock {
+                        // width: 1vw;
+                        // height: 3vh;
+                        // background-color: #ff0000;
+                    }
+
+                    .h1_chapters {
+                        color: #ff0000;
+                        font-size: 18px;
+                        font-weight: bold;
+                        writing-mode: vertical-rl;
+                        text-orientation: mixed;
+                        padding-top: 20px;
+                        position: relative;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: 0.2em;
+                            top: -25px;
+                            height: 40px;
+                            width: 1.2em;
+                            background: #ff0000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_rightside {
+        padding-left: 35vw;
+
+        .background-number1 {
+            font-size: 32em;
+            color: rgba($color: #585858, $alpha: 0.2);
+            z-index: -100;
+            margin-top: -50vh;
+            margin-left: -7vw;
+            //position: relative;
+
+            .top-video {
+                position: absolute;
+                top: 14vh;
+                left: 40vw;
+            }
+        }
+    }
+}
+
+.page-header {
+    background-position: cover;
+    background-size: cover;
+}
+
+.head {
+    @include screen-notebook {
+        padding: 0;
+    }
+
+    .img-top {
+        @include screen-notebook {
+            width: 30vw;
+            height: 80vh;
+        }
+    }
+
+    .middle-contents {
+        @include screen-notebook {
+            top: 15vh;
+            left: 30vw;
+        }
+
+        .title-h1 {
+            @include screen-notebook {
+                font-size: 80px;
+            }
+        }
+
+        .title-small {
+            @include screen-notebook {
+                padding: 0;
+            
+            }
+
+            p {
+                @include screen-notebook {
+                    font-size: 14px;
+                
+                }
+            }
+
+            .cb-h1 {
+                @include screen-notebook {
+                    
+                }
+
+                .p_chapters {
+                    @include screen-notebook {
+                        font-size: 14px;
+                        height: 11vh;
+                    }
+                }
+
+                .h1_chapters {
+                    @include screen-notebook {
+                      
+                    }
+
+                    &:after {
+                        @include screen-notebook {
+                         
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_rightside {
+
+        .background-number1 {
+            margin-top: -60vh;
+            margin-left: -9vw;
+
+            .top-video {
+                top: 8vh;
+                left: 36vw;
+            }
+        }
+    }
+}
+
+.isPlay {
+    animation-name: play1;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    position: relative;
+    opacity: 1 !important;
+  }
+
+.isPlay:before {
+    animation-name: maskOut1;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+   background-image: linear-gradient( 109.6deg,  rgb(243, 32, 32) 11.2%, rgb(247, 6, 6) 91.1% );
+  }
+  
+
+@keyframes play1 {
+    from {
+      transform: translateX(-100%);
+    }
+    
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes maskOut1 {
+    from {
+      transform: translateX(0);
+    }
+    
+    to {
+      transform: translateX(100%);
+    }
+  }

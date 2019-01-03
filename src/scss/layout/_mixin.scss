@@ -1,0 +1,48 @@
+// $iphone5_portrait         :   320px !default;
+// $iphone5_landscape       :   480px !default;
+
+// $iphone7_portrait        :   375px !default; 
+// $iphone7_landscape       :  667px !default; 
+
+// $iphone7plus_portrait        :   480px !default; 
+// $iphone7plus_landscape        :  736px !default; 
+
+// $tablet_portrait       :   768px !default; // new iPad: 1,536 resolution.
+// $tablet_landscape       :  1024px !default; // new iPad: 2,048 resolution.
+
+// $MQ_DESCTOP_NARROW              :  1024px !default;
+// $MQ_DESCTOP_MODERN              :  1280px !default;
+// $MQ_DESCTOP_WIDE                :  1600px !default;
+// $MQ_DESCTOP_HD                  :  1920px !default;
+
+
+
+@mixin respond {
+    // @media screen and (min-width: 1280px) {
+    //     @content;
+    // }
+}
+
+@mixin screen-notebook {
+    @media screen and (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin screen-tablet {
+    @media screen and (min-width: 600px) and (max-width: 959px) {
+        @content;
+    }
+}
+
+@mixin screen-landscape {
+    @media screen and (min-width: 480px) and (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin screen-mobile {
+    @media screen and (max-width: 479px) {
+        @content;
+    }
+}

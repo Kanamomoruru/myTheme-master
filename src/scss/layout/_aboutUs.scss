@@ -1,0 +1,393 @@
+.toppage {
+  height: 100vh;
+
+  .topLink {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #ff0000;
+    position: absolute;
+    top: 10vh;
+    left: 3vw;
+  }
+
+  .pic_nav {
+    padding: 2rem;
+    text-align: center;
+
+    .imgOfAboutUs {
+      position: relative;
+      // z-index: 90;
+    }
+
+    .ourMissionSentence {
+      color: #fff;
+      position: absolute;
+      top: 26.9%;
+      left: 50%;
+      font-size: 17px;
+      // position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: -3.5vw;
+        top: 18%;
+        height: 1.5vh;
+        width: 3vw;
+        background: #fff;
+
+      }
+    }
+
+    .redBlockOfMission {
+      width: 2.7%;
+      height: 120px;
+      background-color: red;
+      position: absolute;
+      top: 44.1vh;
+      left: 19.1vw;
+    }
+
+    .navInAbout {
+      position: absolute;
+      top: 49.4vh;
+      left: 21.8%;
+      list-style: none;
+      overflow: hidden;
+
+      .navOfAboutUs {
+        display: block;
+        padding: 20px;
+        float: left;
+        background-color: red;
+
+        a {
+          font-size: 13px;
+          text-decoration: none;
+          text-align: center;
+          color: #fff;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .ourMission {
+    //display: grid;
+    // grid-gap: -10px;
+    //grid-template-columns: 2fr 1fr;
+    padding: 2rem;
+    display: flex;
+    position: relative;
+
+    .mb-h1 {
+      padding: 2rem;
+      //display: flex;
+      // position: absolute;
+      // top: 4vh;
+      // left: 35vw;
+
+      .h1_ourMission {
+        color: #ff0000;
+        font-size: 20px;
+        position: relative;
+        padding-top: 8vh;
+        padding-left: 16vw;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 16vw;
+          top: 0;
+          height: 1vh;
+          width: 20vw;
+          background: #ff0000;
+        }
+      }
+
+      .background_m {
+        font-size: 32em;
+        color: rgba($color: #585858, $alpha: 0.2);
+        z-index: -100;
+        margin-top: -28vh;
+        margin-left: 27.5vh;
+      }
+    }
+
+    .missionImg_div {
+      padding-top: 18vh;
+    }
+
+    .ourMission-p {
+      display: block;
+      padding-top: 18vh;
+      padding-left: 4vw;
+
+      p {
+        width: 50%;
+        font-size: 13px;
+        //padding-left: 51%;
+      }
+    }
+  }
+}
+
+
+
+.theTeam {
+  position: relative;
+  padding: 2rem;
+  background-image: url(images/background2.png);
+  background-repeat: no-repeat;
+  background-size: 2045px 1060px;
+  height: 100vh;
+
+  .tb-h1 {
+    position: absolute;
+    top: 30vh;
+    left: 20%;
+    z-index: 90;
+
+    .h1_theTeam {
+      color: #ff0000;
+      font-size: 26px;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -30vh;
+        height: 30vh;
+        width: 6vw;
+        background: #ff0000;
+      }
+    }
+
+    .background_2 {
+      font-size: 30em;
+      opacity: 1;
+      color: rgba($color: #585858, $alpha: 0.2);
+      z-index: -100;
+      position: absolute;
+      top: -26vh;
+      left: -2vw;
+      //padding-top: -100vh;
+    }
+  }
+
+  .theTeamImg {
+    position: absolute;
+    top: 20%;
+    left: 23%;
+  }
+
+  .meetTheTeam {
+    position: absolute;
+    top: 70vh;
+    left: 25vw;
+
+    .meetTheTeamBtn {
+      display: block;
+      width: 14vw;
+      padding: 0.5em;
+      margin-bottom: 18px;
+      text-decoration: none;
+      color: #ff0000;
+      border: 1px solid #ff0000;
+      border-radius: 1px;
+      //transition: 0.4s;
+      text-align: left;
+    }
+
+    .joinUs {
+      display: block;
+      width: 14vw;
+      padding: 0.5em;
+      text-decoration: none;
+      color: #ff0000;
+      border: 1px solid #ff0000;
+      border-radius: 1px;
+      //transition: 0.4s;
+      text-align: left;
+    }
+  }
+
+  .theTeam-p {
+    //padding: 2rem;
+    text-align: -webkit-right;
+    padding-right: 22%;
+    padding-top: 20vh;
+
+    p {
+      width: 35%;
+      font-size: 13px;
+      text-align: justify;
+      direction: ltr;
+    }
+
+    .team_members {
+      display: inline-flex;
+      padding-top: 8vh;
+      //padding-right: 2vw;
+
+      &1div {
+        display: grid;
+        padding: 40px;
+      }
+
+      &2div {
+        display: grid;
+        padding: 40px;
+      }
+
+      &3div {
+        display: grid;
+        padding: 40px;
+      }
+    }
+  }
+}
+
+.ourHistory {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  height: 90vh;
+
+
+  &-p {
+    //text-align: -webkit-left;
+    //padding-right: 20vw;
+    padding-left: 20vw;
+    padding-top: 33vh;
+
+    p {
+      width: 75%;
+      font-size: 13px;
+      text-align: justify;
+      direction: ltr;
+
+    }
+  }
+
+
+  &_rightside {
+    padding-right: 20vw;
+    padding-top: 33vh;
+
+    //position: absolute;
+    // top: 20%;
+    // left: 18%;
+
+    .hb-h1 {
+      padding: 2rem;
+      position: absolute;
+      // top: -4vh;
+      // left: 20.5vw;
+      //z-index: 90;
+
+      .h1_ourHistory {
+        color: #ff0000;
+        font-size: 38px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        padding-left: 18.5vw;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 40vh;
+          top: -41.2vh;
+          height: 40vh;
+          width: 2vw;
+          background: #ff0000;
+
+        }
+      }
+
+      .background_h {
+        font-size: 34em;
+        opacity: 1;
+        color: rgba($color: #585858, $alpha: 0.3);
+        //z-index: -100;
+        position: absolute;
+        top: -28vh;
+        left: -2vw;
+
+      }
+    }
+
+    .ourHistoryImg {
+      margin-top: -10vh;
+    }
+  }
+}
+
+.press {
+  position: relative;
+  //padding: 2rem;
+  background-image: url(images/background2.png);
+  background-repeat: no-repeat;
+  background-size: 2045px 1060px;
+  height: 100vh;
+
+  &_middle {
+    margin-left: 40%;
+
+    .pb-h1 {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      z-index: 90;
+      //display: flex;
+
+      .h1_press {
+        color: #ff0000;
+        font-size: 34px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        padding-top: 5vh;
+        padding-left: 15vw;
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 52vw;
+          top: 8vh;
+          height: 25vh;
+          width: 3vw;
+          background: #ff0000;
+
+        }
+      }
+
+      .background_4 {
+        font-size: 30em;
+        opacity: 1;
+        color: rgba($color: #585858, $alpha: 0.2);
+        z-index: 100;
+      }
+    }
+
+    .pressImg {
+      position: absolute;
+      top: 10vh;
+      z-index: -1;
+    }
+
+    .press-p {
+      //padding-right: 20vw;
+      width: 38%;
+      font-size: 13px;
+      margin-top: -30vh;
+
+      p {
+        text-align: justify;
+        direction: ltr;
+      }
+    }
+  }
+}

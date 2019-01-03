@@ -1,0 +1,105 @@
+.chapterMain {
+    background-image: url(images/background2.png);
+    background-repeat: no-repeat;
+    background-size: 1049px 1060px;
+    position: relative;
+    height:  100vh;
+    display: flex;
+
+    @include screen-notebook {
+        background-size: 800px 1060px;
+    }
+
+    .background-number4 {
+        font-size: 32em;
+        color: rgba($color: #585858, $alpha: 0.2);
+        z-index: -100;
+        padding-top: 4vh;
+        padding-left: 10vw;
+
+        @include screen-notebook {
+            font-size: 28em;
+        }
+    }
+
+    .chapterMain-leftside {
+        position: absolute;
+        top: 3%;
+        // width: 30%;
+
+
+        .chapterMain-h1 {
+            font-size: 44px;
+            //font-weight: 500;
+            color: #ff0000;
+            position: relative;
+            padding-left: 39vw;
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 10vw;
+                top: 25%;
+                height: 42px;
+                width: 28vw;
+                background: #ff0000;
+            }
+        }
+
+        .chapterMain-small {
+            font-size: 20px;
+            width: 13%;
+            padding-top: 6vh;
+            padding-left: 37vw;
+        }
+
+        .chapterMain-explenation {
+            width: 25%;
+            padding-top: 10vh;
+            padding-left: 12vw;
+            height: 40vh;
+            overflow: auto;
+            direction: rtl;
+            display: block;
+
+            p {
+                font-size: 14px;
+                text-align: justify;
+                direction: ltr;
+            }
+        }
+    }
+
+    .post_side {
+        margin-top: 17vh;
+        margin-left: 8vw;
+        padding: 2rem;
+
+        .post_img {
+            img {
+                width: 45vw;
+                height: 35vh;
+            }
+        }
+
+        .post_title {
+            font-size: 24px;
+        }
+
+        .post_author_name {
+            font-size: 18px;
+        }
+
+        .post_sentence {
+            padding: 3rem;
+            text-align: center;
+            width: 38vw;
+
+            p {
+                font-size: 14px;
+                text-align: justify;
+                direction: ltr;
+            }
+        }
+    }
+}

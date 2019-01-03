@@ -1,0 +1,174 @@
+.intro-header {
+    padding: 3rem;
+    display: flex;
+    background-image: url(images/background2.png);
+    background-repeat: no-repeat;
+    background-size: 2049px 1060px;
+    height: 86vh;
+
+    .intro-leftside {
+        padding-left: 5.5vw;
+        // margin-top: 8vh;
+
+        .ib-h1 {
+            display: flex;
+            position: relative;
+
+            .intro-h1 {
+                font-size: 40px;
+                font-weight: bold;
+                letter-spacing: 1;
+                width: 60%;
+                color: #ff0000;
+                overflow-wrap: break-word;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: -40px;
+                    top: 10%;
+                    height: 9vh;
+                    width: 1.5vw;
+                    background: #ff0000;
+                }
+            }
+
+            .background-number2 {
+                font-size: 32em;
+                color: rgba($color: #585858, $alpha: 0.2);
+                z-index: -100;
+                position: absolute;
+                top: -20vh;
+                left: 10vw;
+
+                @include screen-notebook {
+                    font-size: 30em;
+                    top: -10vh;
+                    left: 5vw;
+                }
+            }
+        }
+
+        .intro-small1 {
+            padding-top: 4vh;
+            padding-left: 4vw;
+            width: 30%;
+        }
+
+        // .intro-small2 {
+        //     padding-left: 4vw;
+
+        //     p {
+        //         width: 30%;
+        //     }
+        // }
+
+        .exprenaiton-wrap {
+            padding-top: 4vh;
+            width: 29vw;
+            direction: ltr;
+            text-align: justify;
+            // position: relative;
+
+            @include screen-notebook {
+                padding-top: 1vh;
+            }
+
+            .exprenation {
+                height: 45vh;
+                overflow: auto;
+                direction: rtl;
+                display: block;
+
+                p {
+                    font-size: 14px;
+                    text-align: justify;
+                    direction: ltr;
+
+                    @include screen-notebook {
+                        font-size: 12px;
+            
+                    }
+                }
+            }
+        }
+
+        .rcBtn2 {
+            position: absolute;
+            // top: 105%;
+            left: 30%;
+            display: block;
+            width: 120px;
+            padding: 0.5em;
+            margin: 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: #ff0000;
+            border: 2px solid #ff0000;
+            border-radius: 3px;
+            transition: .4s;
+
+            &:hover {
+                background: #ff0000;
+                color: #fff;
+            }
+
+            @include screen-notebook {
+                top: 190vh;;
+            }
+        }
+    }
+
+    .intro-rightside {
+        display: flex;
+        padding-right: 10vw;
+
+        .spinsroll {
+            height: 6%;
+            color: #ff0000;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            overflow-wrap: break-word;
+            position: absolute;
+            top: 130%;
+            left: 45%;
+
+            @include screen-notebook {
+                height: 8%;
+            }
+
+        }
+
+        .introBtns {
+            position: absolute;
+            top: 130%;
+            left: 47%;
+            display: block;
+            padding: 2rem;
+
+            .introBtn {
+                text-decoration: none;
+                // font-weight: 700;
+                display: block;
+                width: 50px;
+                padding: 10px;
+                color: #ff0000;
+            }
+        }
+
+        .intro-video {
+            position: absolute;
+            top: 65%;
+            left: 60%;
+
+            @include screen-notebook {
+                height: 1000px;
+                width: 500px;
+                top: 70%;
+                left: 55%;
+            }
+        }
+    }
+}
+

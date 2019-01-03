@@ -1,0 +1,283 @@
+.chapterIntro-header {
+  margin-top: -50px;
+  background-image: url(images/background2.png);
+  background-repeat: no-repeat;
+  background-size: 2049px 1060px;
+  display: flex;
+  padding: 2rem;
+  //height: 100vh;
+
+  .Slider {
+    padding: 2rem;
+    margin-top: 20vh;
+    margin-left: 4vw;
+    width: 50%;
+    //height: 500vh;
+
+    @include screen-notebook {
+      margin-top: 5vh;
+    }
+
+    .chapter_avatar {
+      //transform: translateY(-90px);
+      // transition-duration: 3s;
+
+      .chapter_info {
+        // &.is-selected {
+        //   font-size: 24px;
+        // }
+
+        .chapter_overlay {
+          .chapter_fname_age {
+            font-weight: bold;
+          }
+
+          .chapter_location {
+            position: relative;
+            display: inline-block;
+            padding-left: 2.5em;
+
+            &:after {
+              content: "";
+              position: absolute;
+              left: -0em;
+              top: 50%;
+              height: 1px;
+              width: 2.0em;
+              background: #333;
+              // transform: translateY(-50%);
+
+            }
+          }
+        }
+      }
+
+      .the-img {
+        overflow: hidden;
+
+        img {
+          width: 250px;
+          height: 350px;
+          position: relative;
+        }
+      }
+    }
+
+    .chapter_avatar {
+      // transform: translateY(100%);
+
+      &.is-selected {
+        img {
+          width: 300px;
+          height: 450px;
+          // transform: translateY(90%);
+          // transition: all 600ms ease-out;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  .flickity-enabled {
+    position: relative;
+  }
+
+  .flickity-enabled:focus {
+    outline: none;
+  }
+
+  .flickity-viewport {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+
+  .flickity-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* draggable */
+
+  .flickity-enabled.is-draggable {
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .flickity-enabled.is-draggable .flickity-viewport {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: grab;
+  }
+
+  .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+
+  /* ---- flickity-button ---- */
+
+  .flickity-button {
+    position: absolute;
+    background: #ff0000;
+    border: none;
+    color: #333;
+    transition: 0.3s;
+  }
+
+  .flickity-button:hover {
+    // background: white;
+    opacity: 0.6;
+    // cursor: pointer;
+  }
+
+  .flickity-button:focus {
+    outline: none;
+    // box-shadow: 0 0 0 5px #19f;
+  }
+
+  .flickity-button:active {
+    opacity: 0.6;
+  }
+
+  .flickity-button:disabled {
+    opacity: 0.3;
+    cursor: auto;
+    /* prevent disabled button from capturing pointer up event. #716 */
+    pointer-events: none;
+  }
+
+  .flickity-button-icon {
+    fill: #fff;
+  }
+
+  /* ---- previous/next buttons ---- */
+
+  .flickity-prev-next-button {
+    // top: 95%;
+    width: 44px;
+    height: 44px;
+    /* vertically center */
+    transform: translateY(-50%);
+  }
+
+  .flickity-prev-next-button.previous {
+    left: 10px;
+  }
+
+  .flickity-prev-next-button.next {
+    right: 10px;
+  }
+
+  /* right to left */
+  .flickity-rtl .flickity-prev-next-button.previous {
+    left: auto;
+    right: 10px;
+  }
+
+  .flickity-rtl .flickity-prev-next-button.next {
+    right: auto;
+    left: 10px;
+  }
+
+  .flickity-prev-next-button .flickity-button-icon {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
+  }
+
+  .carousel-display {
+    position: absolute;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+  }
+
+  .carousel-cell {
+    width: 100%;
+    height: 200px;
+    counter-increment: carousel-cell;
+  }
+
+  .main-carousel .carousel-cell {
+    width: 50%;
+    height: 128px;
+    margin-right: 8px;
+  }
+
+  .chapterIntro-rightside {
+    padding: 2rem;
+    width: 40%;
+
+    .background-number3 {
+      font-size: 32em;
+      color: rgba($color: #585858, $alpha: 0.2);
+      z-index: -100;
+      // position: relative;
+      // position: absolute;
+      // top: 100px;
+
+      @include screen-notebook {
+        font-size: 28em;
+      }
+
+    }
+
+    .chapterIntro-story {
+      position: absolute;
+      top: 210%;
+      width: 30%;
+
+      .chapterIntro-h1 {
+        font-size: 44px;
+        color: #ff0000;
+        position: relative;
+        padding-left: 4vw;
+
+        @include screen-notebook {
+          padding-left: 6vw;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0.2em;
+          top: 30%;
+          height: 30px;
+          width: 1.3em;
+          background: #ff0000;
+        }
+      }
+
+      .chapterIntro-small {
+        font-size: 20px;
+        width: 45%;
+        padding-top: 20px;
+        padding-left: 80px;
+      }
+
+      .chapterIntro-explenation {
+        padding-top: 12vh;
+        padding-left: 4vw;
+        height: 50vh;
+        overflow: auto;
+        direction: rtl;
+        display: block;
+
+        p {
+          font-size: 14px;
+          text-align: justify;
+          direction: ltr;
+        }
+      }
+    }
+
+  }
+}

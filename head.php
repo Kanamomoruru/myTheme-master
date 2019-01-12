@@ -2,14 +2,30 @@
     <!-- <header class="page-header"> -->
         <div class="head section-content">
             <div class="head_leftside">
-                <div class="img_box">
-                    <img class="img-top" src="<?php echo get_template_directory_uri(); ?>/images/topImage.png">
+                <div class="img_box1">
+                    <!-- <div class="colorLayer2"></div> -->
+                    <!-- <div class="image1"> -->
+                        <img class="img-top" src="<?php echo get_template_directory_uri(); ?>/images/topImage.png">
+                    <!-- </div>  -->
                 </div>
                 
                 <div class="middle-contents">
-                    <div class="box1">
-                        <div class="title-h1">Let's keep our planet spinning.</div>
+                    <div class="big_title">
+                        <div id="box1">
+                            <div class="colorLayer1"></div>
+                            <div class="title-h1">Let's keep</div>
+                        </div>
+                        <div id="box2">
+                            <div class="colorLayer1"></div>
+                            <div class="title-h1">our planet</div>
+                        </div>
+                        <div id="box3">
+                            <div class="colorLayer1"></div>
+                            <div class="title-h1">spinning</div>
+                        </div>
+
                     </div>
+                    
                     
                     <div class="title-small">
                         <p>SPIN is a donation-based crowdfunding platform, developed on blockchain. On this platform, all transactions are traceable.</p>
@@ -26,7 +42,9 @@
                 <!-- <div class="backnumber1">01</div> -->
                 <div class="background-number1">01
                     <div class="logindiv">
-                        <button class="loginBtn"><i class="fa fa-login"></i></button>
+                        <img class="login_img" src="<?php echo get_template_directory_uri(); ?>/images/login.png">
+                        <a href="<?php echo home_url('/login')?>"></a>
+                        <p>LOGIN/SIGN UP</p>
                     </div>
                     <div class="top-video">
                         <video class="head-video" controls width="300" height="200" poster="<?php echo get_template_directory_uri(); ?>/images/demovideo.jpg">

@@ -1,0 +1,76 @@
+.masterIntro {
+    background-image: url(images/background2.png);
+    background-repeat: no-repeat;
+    background-size: 2049px 1060px;
+    position: relative;
+    display: flex;
+    height: 100vh;
+
+    .mentor_list {
+        padding: 5rem;
+
+
+
+
+        .mentor_about {
+            //width: 50%;
+            text-align: center;
+            padding-left: 20vw;
+            padding-top: 5vh;
+
+            .mentor_pic {
+                .mentor_name {
+                    .mentor_purpose {}
+                }
+            }
+        }
+    }
+
+    .mentor_right {
+
+
+        .background_number6 {
+            font-size: 32em;
+            color: rgba($color: #585858, $alpha: 0.1);
+            padding-left: 14vw;
+        }
+
+        .mentor_title {
+            padding: 2rem;
+            position: absolute;
+            top: -5vh;
+            left: 47vw;
+
+            .mentor {
+                font-size: 4em;
+                color: #ff0000;
+
+                span {
+                    font-size: 3em;
+                    padding-right: 3VW;
+                }
+
+            }
+
+            .mentor_small {
+                font-size: 25px;
+                width: 30%;
+                margin-top: -10vh;
+                // position: absolute;
+                // top: 18vh;
+                // left: 8vw;
+
+            }
+
+            .mentor_sentence {
+                width: 65%;
+                text-align: justify;
+                padding-top: 10vh;
+                padding-left: 10vw;
+            }
+
+        }
+
+    }
+
+}

@@ -1,14 +1,18 @@
 <?php get_header(); ?>
+<?php get_template_part('navbar'); ?>
 
 <main>
    <?php
-    if ( have_posts() ) : while ( have_posts() ) : the_post();
-    ?>
+    if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+    <?php 
+        if(function_exists('get_field')) :
+            $author_id = get_the_author_id();
+            $member_nickname= get_field('member-nickname', 'user_'. $author_id );
+            $author_image= get_field('user_avatar', 'user_'. $author_id );
+            $size= 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+        endif;
+?>
     
-        <article class="content">
-            <h2><?php the_title(); ?></h2>
-            <?php the_content(); ?>
-        </article>
     
     <?php
     endwhile;
@@ -16,5 +20,5 @@
     ?>
 </main>
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

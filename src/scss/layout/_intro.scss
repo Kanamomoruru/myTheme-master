@@ -6,6 +6,11 @@
     background-size: 2049px 1060px;
     height: 86vh;
 
+
+    @include screen-notebook {
+    //    height: 82vh;
+    }
+
     .intro-leftside {
         padding-left: 5.5vw;
         // margin-top: 8vh;

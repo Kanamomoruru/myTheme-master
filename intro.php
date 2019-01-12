@@ -66,7 +66,7 @@
                 <p>
             </div>
         </div>
-         <a href="#" class="rcBtn2">Read Chapters</a>
+        
     </div> 
    
     <div class="intro-rightside">

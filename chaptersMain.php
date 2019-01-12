@@ -75,7 +75,19 @@
     $cm_sentence = get_field('cm_sentence', $chaptermain);
 ?>
 
- 
+<ul>
+<?php
+$terms = get_the_terms($post->ID,'chapterpost');
+foreach($terms as $term1) :
+echo $term1->name;
+if ($term1 !== end($terms)) {
+    echo ', ';
+}
+endforeach;
+?>
+</ul>
+
+
  <!-- 右側の投稿ページ -->
 <div class="post_side">
     <?php 

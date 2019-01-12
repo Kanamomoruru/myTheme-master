@@ -1,0 +1,38 @@
+.store_page {
+  padding: 3px; }
+  .store_page .store_store {
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-writing-mode: vertical-rl !important;
+    -ms-writing-mode: tb-rl !important;
+    writing-mode: vertical-rl !important;
+    text-orientation: mixed !important;
+    position: relative;
+    top: 30vh;
+    left: 45vw; }
+    .store_page .store_store:after {
+      content: "";
+      position: absolute;
+      left: 30px;
+      top: -33vh;
+      height: 40vh;
+      width: .05vw;
+      background-color: #ccc; }
+  .store_page .store_comingsoon {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: #ff0000;
+    position: relative;
+    top: 30vh;
+    left: 7vw; }
+    .store_page .store_comingsoon:after {
+      content: "";
+      position: absolute;
+      left: 58.8vw;
+      top: 2.5vh;
+      height: 3vh;
+      width: 4vw;
+      background-color: #ff0000; }
+  .store_page .store_img {
+    padding-left: 70%; }

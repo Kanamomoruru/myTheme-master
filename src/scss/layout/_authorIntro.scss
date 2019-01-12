@@ -1,0 +1,112 @@
+.authorIntro {
+    background-image: url(images/background2.png);
+    background-repeat: no-repeat;
+    background-size: 1249px 1060px;
+    position: relative;
+    display: flex;
+    height: 100vh;
+
+
+    @include screen-notebook {
+        background-size: 900px 1060px;
+    }
+
+    .background_number5 {
+        font-size: 32em;
+        color: rgba($color: #585858, $alpha: 0.1);
+        //z-index: -100;
+        padding-left: 8vw;
+
+
+    @include screen-notebook {
+        font-size: 28em
+    }
+
+
+    }
+
+    .author_title {
+        padding: 2rem;
+        position: absolute;
+        top: -5vh;
+        left: 7vw;
+
+
+    @include screen-notebook {
+        top: -10vh;
+    }
+
+        .author {
+            font-size: 5em;
+            color: #ff0000;
+
+            span {
+                font-size: 3em;
+                padding-right: 3VW;
+            }
+
+            @include screen-notebook {
+                font-size: 4em;
+            }
+        }
+
+        .author_small {
+            font-size: 25px;
+            width: 18%;
+            position: absolute;
+            top: 18vh;
+            left: 8vw;
+
+            @include screen-notebook {
+                font-size: 22px;
+                width: 20%;
+                left: 10vw;
+            }
+        }
+
+        .author_sentence {
+            width: 30%;
+
+            @include screen-notebook {
+                width: 40%;
+            }
+        }
+    }
+
+    .about_author {
+        padding-top: 17vh;
+        padding-left: 5vw;
+    }
+
+    &_rightside {
+        padding: 2rem;
+
+        .author_chapter_img {
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+
+        }
+
+        .author_chapter_info {
+            .author_chapter_fname_age {
+                padding-left: 10vw;
+
+            }
+
+            .author_chapter_location {
+                padding-left: 10vw;
+            }
+
+            .author_chapter_story {
+                font-size: 14px;
+                position: absolute;
+                left: 85vw;
+
+
+            }
+        }
+    }
+
+
+}

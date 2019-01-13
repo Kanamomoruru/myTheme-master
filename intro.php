@@ -2,7 +2,19 @@
 <div class="intro-header section-content">
     <div class="intro-leftside">
         <div class="ib-h1">
-            <div class="intro-h1">Social-parents, Investment & Nurture</div>
+            <!-- <div class="intro-h1">Social-parents, Investment & Nurture</div> -->
+
+            <div class="big_title">
+                <div id="box4">
+                    <div class="colorLayer2"></div>
+                    <div class="intro-h1">Social-parents,</div>
+                </div>
+                <div id="box5">
+                    <div class="colorLayer2"></div>
+                    <div class="intro-h1"> Investment & Nurture</div>
+                </div>
+            </div>
+
             <div class="background-number2">02</div>
         </div>
         <div class="intro-small1">

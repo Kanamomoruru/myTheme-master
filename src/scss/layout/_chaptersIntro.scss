@@ -13,6 +13,7 @@
     margin-left: 4vw;
     width: 50%;
     //height: 500vh;
+    opacity: 0;
 
     @include screen-notebook {
       margin-top: 5vh;
@@ -215,17 +216,17 @@
   .chapterIntro-rightside {
     padding: 2rem;
     width: 40%;
+    //opacity: 0;
 
     .background-number3 {
       font-size: 32em;
       color: rgba($color: #585858, $alpha: 0.2);
       z-index: -100;
-      // position: relative;
-      // position: absolute;
-      // top: 100px;
+      opacity: 0;
+
 
       @include screen-notebook {
-        font-size: 28em;
+        font-size: 26em;
       }
 
     }
@@ -235,26 +236,82 @@
       top: 210%;
       width: 30%;
 
-      .chapterIntro-h1 {
-        font-size: 44px;
-        color: #ff0000;
-        position: relative;
-        padding-left: 4vw;
+
+
+
+      .big-title {
+      
 
         @include screen-notebook {
-          padding-left: 6vw;
-        }
-
-        &:after {
-          content: "";
-          position: absolute;
-          left: 0.2em;
-          top: 30%;
-          height: 30px;
-          width: 1.3em;
-          background: #ff0000;
-        }
+          margin-top: -4vh;
       }
+
+        #box6 {
+          height: 120px;
+          width: 500px;
+         // margin-left: 300px;
+          transform: translateY(-50%);
+          overflow: hidden;
+  
+          @include screen-notebook {
+              height: 60px;
+              width: 500px;
+              //margin-left: 300px;
+              transform: translateY(-50%);
+              overflow: hidden;
+                  
+          }
+  
+          .colorLayer3 {
+              height: 120px;
+              width: 500px;
+              background-color: #ff0000;
+              position: absolute;
+              left: -500px;
+              //z-index: 9;
+  
+              @include screen-notebook {
+                  height: 60px;
+                  width: 500px;
+                  background-color: #ff0000;
+                  position: absolute;
+                  left: -500px;
+                      
+              }
+          }
+  
+          .chapterIntro-h1 {
+              font-size: 80px;
+              color: #ff0000;
+              //line-height: 10px;
+              position: absolute;
+              left: -500px;
+              //z-index: 1;
+  
+              @include screen-notebook {
+                  font-size: 50px;
+                  color: #ff0000;
+                  //line-height: 10px;
+                  position: absolute;
+                  left: -500px;
+                  padding-left: 50px;
+                      
+              }
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            left: -1vw;
+            top: 3vh;
+            height: 30px;
+            width: 3.5em;
+            background: #ff0000;
+          }
+      }
+    }
+
+    .right_elements {
+      opacity: 0;
 
       .chapterIntro-small {
         font-size: 20px;
@@ -279,5 +336,84 @@
       }
     }
 
+    }
   }
 }
+
+//右から
+.isPlay9 {
+  animation-name: play9;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.8,0,.5,1);
+  position: relative;
+  opacity: 1 !important;
+}
+
+.isPlay9:before {
+  // animation-name: maskOut9;
+  // animation-duration: .5s;
+  // animation-delay: .5s;
+  // animation-fill-mode: forwards;
+  // animation-timing-function: cubic-bezier(.8,0,.5,1);
+  // content: '';
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // z-index: 1;
+  // width: 100%;
+  // height: 100%;
+  //background-image: linear-gradient( 109.6deg,  rgb(243, 32, 32) 11.2%, rgb(247, 6, 6) 91.1% );
+}
+
+
+@keyframes play9 {
+  from {
+    transform: translateX(100%);
+  }
+  
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes maskOut9 {
+  from {
+    transform: translateX(0);
+  }
+  
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+//下から
+.isPlay10 {
+  animation-name: play10;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.8,0,.5,1);
+  position: relative;
+  opacity: 1 !important;
+}
+
+
+@keyframes play10 {
+  from {
+    transform: translateY(100%);
+  }
+  
+  to {
+    transform: translateX(0);
+  }
+}
+
+// @keyframes maskOut8 {
+//   from {
+//     transform: translateX(0);
+//   }
+  
+//   to {
+//     transform: translateY(-100%);
+//   }
+// }

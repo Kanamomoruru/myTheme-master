@@ -14,13 +14,13 @@
     &_leftside {
         padding-top: 5rem;
         margin-left: 10vw;
-        // display: flex;
+
 
         .img_box1 {
-            overflow: hidden;
+           // overflow: hidden;
 
             .img-top {
-                width: 0%;
+                width: 80%;
                 background-color: transparent;
                 opacity: 0;
             }
@@ -94,7 +94,7 @@
                     @include screen-notebook {
                         height: 120px;
                         width: 500px;
-                        margin-left: 300px;
+                        //margin-left: 300px;
                         transform: translateY(-50%);
                         overflow: hidden;
                             
@@ -183,10 +183,13 @@
                 padding: 2rem;
                 position: absolute;
                 left: 6vw;
+                background-color: transparent;
+                opacity: 0;
+          
 
                 p {
                     width: 16vw;
-                    opacity: 0;
+                    //opacity: 0;
                     font-family: 'Montserrat', sans-serif;
                 }
 
@@ -240,10 +243,12 @@
         .background-number1 {
             font-size: 32em;
             color: rgba($color: #585858, $alpha: 0.2);
-            z-index: -100;
+            //z-index: -100;
             margin-top: -50vh;
             margin-left: -7vw;
             //position: relative;
+            background-color: transparent;
+            opacity: 0;
 
             .top-video {
                 position: absolute;
@@ -324,8 +329,8 @@
             
             .top-video {
                 @include screen-notebook {
-                    top: 16vh;
-                    left: 36vw;
+                    top: 36vh;
+                    left: 10vw;
                 }
                 
                
@@ -334,7 +339,8 @@
     }
 }
 
-.isPlay {
+//左から
+.isPlay1 {
     animation-name: play1;
     animation-duration: .5s;
     animation-fill-mode: forwards;
@@ -343,7 +349,7 @@
     opacity: 1 !important;
   }
 
-.isPlay:before {
+.isPlay1:before {
     animation-name: maskOut1;
     animation-duration: .5s;
     animation-delay: .5s;
@@ -379,3 +385,147 @@
       transform: translateX(100%);
     }
   }
+
+//右から
+  .isPlay2 {
+    animation-name: play2;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    position: relative;
+    opacity: 1 !important;
+  }
+
+.isPlay2:before {
+    animation-name: maskOut2;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    //background-image: linear-gradient( 109.6deg,  rgb(243, 32, 32) 11.2%, rgb(247, 6, 6) 91.1% );
+  }
+  
+
+@keyframes play2 {
+    from {
+      transform: translateX(100%);
+    }
+    
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes maskOut2 {
+    from {
+      transform: translateX(0);
+    }
+    
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+//上から
+  .isPlay3 {
+    animation-name: play3;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    position: relative;
+    opacity: 1 !important;
+  }
+
+.isPlay3:before {
+    animation-name: maskOut3;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    //background-image: linear-gradient( 109.6deg,  rgb(243, 32, 32) 11.2%, rgb(247, 6, 6) 91.1% );
+  }
+  
+
+@keyframes play3 {
+    from {
+      transform: translateY(-100%);
+    }
+    
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes maskOut3 {
+    from {
+      transform: translateX(0);
+    }
+    
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+
+  //下から
+  .isPlay4 {
+    animation-name: play4;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    position: relative;
+    opacity: 1 !important;
+  }
+
+.isPlay4:before {
+    animation-name: maskOut4;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    //background-image: linear-gradient( 109.6deg,  rgb(243, 32, 32) 11.2%, rgb(247, 6, 6) 91.1% );
+  }
+  
+
+@keyframes play4 {
+    from {
+      transform: translateY(100%);
+    }
+    
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes maskOut4 {
+    from {
+      transform: translateX(0);
+    }
+    
+    to {
+      transform: translateY(-100%);
+    }
+  }
+
+  

@@ -4,10 +4,15 @@
     background-size: 1049px 1060px;
     position: relative;
     height:  100vh;
-    display: flex;
+    //display: flex;
+    flex-direction: column;
+    flex-flow: column nowrap;
+
+    //align-items: center;
 
     @include screen-notebook {
         background-size: 800px 1060px;
+        //height: 300vh;
     }
 
     .background-number4 {
@@ -28,78 +33,209 @@
         // width: 30%;
 
 
-        .chapterMain-h1 {
-            font-size: 44px;
-            //font-weight: 500;
-            color: #ff0000;
-            position: relative;
-            padding-left: 39vw;
 
-            &:after {
-                content: "";
-                position: absolute;
-                left: 10vw;
-                top: 25%;
-                height: 42px;
-                width: 28vw;
-                background: #ff0000;
+
+
+
+      .big-title {
+      
+
+        @include screen-notebook {
+          margin-top: 12vh;
+          padding-left: 5vw; 
+      }
+
+        #box7 {
+          height: 120px;
+          width: 500px;
+         // margin-left: 300px;
+          transform: translateY(-50%);
+          overflow: hidden;
+  
+          @include screen-notebook {
+              height: 70px;
+              width: 700px;
+              //margin-left: 300px;
+              transform: translateY(-50%);
+              overflow: hidden;
+                  
+          }
+  
+          .colorLayer4 {
+              height: 120px;
+              width: 500px;
+              background-color: #ff0000;
+              position: absolute;
+              left: -500px;
+              //z-index: 9;
+  
+              @include screen-notebook {
+                  height: 70px;
+                  width: 700px;
+                  background-color: #ff0000;
+                  position: absolute;
+                  left: -500px;
+                      
+              }
+          }
+  
+          .chapterMain-h1 {
+              font-size: 80px;
+              color: #ff0000;
+              //line-height: 10px;
+              position: absolute;
+              left: -500px;
+              //z-index: 1;
+  
+              @include screen-notebook {
+                  font-size: 50px;
+                  color: #ff0000;
+                  //line-height: 10px;
+                  position: absolute;
+                  left: -500px;
+                  padding-left: 30vw;
+                      
+              }
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            left: 1vw;
+            top: 2vh;
+            height: 6vh;
+            width: 25em;
+            background: #ff0000;
+          }
+      }
+    }
+
+
+        // .chapterMain-h1 {
+        //     font-size: 44px;
+        //     //font-weight: 500;
+        //     color: #ff0000;
+        //     position: relative;
+        //     padding-left: 39vw;
+
+        //     &:after {
+        //         content: "";
+        //         position: absolute;
+        //         left: 10vw;
+        //         top: 25%;
+        //         height: 42px;
+        //         width: 28vw;
+        //         background: #ff0000;
+        //     }
+        // }
+        .chapterMain-contents {
+            opacity: 0;
+
+            .chapterMain-small {
+                font-size: 20px;
+                width: 13%;
+                padding-top: 6vh;
+                padding-left: 37vw;
+    
+                @include screen-notebook {
+                    width: 20%;
+                        
+                }
             }
-        }
-
-        .chapterMain-small {
-            font-size: 20px;
-            width: 13%;
-            padding-top: 6vh;
-            padding-left: 37vw;
-        }
-
-        .chapterMain-explenation {
-            width: 25%;
-            padding-top: 10vh;
-            padding-left: 12vw;
-            height: 40vh;
-            overflow: auto;
-            direction: rtl;
-            display: block;
-
-            p {
-                font-size: 14px;
-                text-align: justify;
-                direction: ltr;
+    
+            .chapterMain-explenation {
+                width: 25%;
+                padding-top: 10vh;
+                padding-left: 12vw;
+                height: 40vh;
+                overflow: auto;
+                direction: rtl;
+                display: block;
+    
+                p {
+                    font-size: 14px;
+                    text-align: justify;
+                    direction: ltr;
+                }
             }
-        }
+        } 
     }
 
     .post_side {
         margin-top: 17vh;
         margin-left: 8vw;
         padding: 2rem;
+        //display: flex;
+        //flex-flow: column wrap;
+        float: right;
 
-        .post_img {
-            img {
-                width: 45vw;
-                height: 35vh;
+        @include screen-notebook {
+            position: relative;
+            top: -100vh;
+            //left: 50vw;
+          }
+
+            .post_img {
+                img {
+                    width: 45vw;
+                    height: 35vh;
+    
+                    @include screen-notebook {
+                        width: 35vw;
+                      }
+                }
             }
-        }
-
-        .post_title {
-            font-size: 24px;
-        }
-
-        .post_author_name {
-            font-size: 18px;
-        }
-
-        .post_sentence {
-            padding: 3rem;
-            text-align: center;
-            width: 38vw;
-
-            p {
-                font-size: 14px;
-                text-align: justify;
-                direction: ltr;
+    
+            .post_title {
+                font-size: 24px;
             }
-        }
+    
+            .post_author_name {
+                font-size: 18px;
+            }
+    
+            .post_sentence {
+                padding: 3rem;
+                text-align: center;
+                width: 38vw;
+    
+                @include screen-notebook {
+                    padding: 0;
+                    width: 50%;
+                    
+                  }
+    
+                p {
+                    font-size: 14px;
+                    text-align: justify;
+                    direction: ltr;
+    
+                    @include screen-notebook {
+                        width: 40vw;
+                      }
+                }
+            }
+         // }
     }
 }
+
+//左から
+.isPlay11 {
+    animation-name: play11;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    position: relative;
+    opacity: 1 !important;
+  }
+  
+
+@keyframes play11 {
+    from {
+      transform: translateX(-100%);
+    }
+    
+    to {
+      transform: translateX(0);
+    }
+  }
+  

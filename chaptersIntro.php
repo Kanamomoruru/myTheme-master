@@ -36,8 +36,7 @@
                     </figure>
                 <?php endif; ?> 
             </div>
-            
-                
+        
             <?php endforeach?> 
         </div>
     </div> <!-- slider -->
@@ -45,8 +44,15 @@
     <div class="chapterIntro-rightside">
         <div class="background-number3">03</div>
         <div class="chapterIntro-story">
-            <div class="chapterIntro-h1">Stories</div>
-                <div class="chapterIntro-small">Writting success stories of unique talents.</div>
+            <!-- <div class="chapterIntro-h1">Stories</div> -->
+            <div class="big-title">
+                <div id="box6">
+                    <div class="colorLayer3"></div>
+                    <div class="chapterIntro-h1">Stories</div>
+                </div>
+            </div>
+                <div class="right_elements">
+                    <div class="chapterIntro-small">Writting success stories of unique talents.</div>
                     <div class="chapterIntro-explenation">
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and
@@ -100,6 +106,8 @@
                         <p>
                     </div>
                 </div>
+                
+            </div>
         </div>
 </div> <!-- chapterIntro-header-->
 </section>

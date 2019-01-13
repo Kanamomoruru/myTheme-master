@@ -24,17 +24,43 @@
             </div>
 
             <!--   test    -->
+            <?php 
+                $post_user = get_the_author();
+                if ( $post_user == 'test1' ){
+                    echo '<span>ここに作成者・投稿者が「山田太郎」である時に動作させたいコードを挿入する</span>';
+                }else{
+                    echo '<span>ここに作成者・投稿者が「山田太郎」以外である時に動作させたいコードを挿入する</span>';
+                };
+            ?>
 
-            
+
 
         </div>
         <div class="about_author">
+        <?php
+                $args = array (
+                    'post_type' => 'author',
+                    'post_per_page' => '2',
+                );
+                $authors = get_posts($args);  //defined chapters
+
+                foreach($authors as $author): //Loop
+
+                //To get data from chapter
+                $author_name = get_field('author_name', $author);
+                 
+            ?>
+            <p><strong><?php echo $author_name?></strong></p>
+      
         
+            <?php endforeach?> 
         <!-- <p>SPIN FOUNDER</p> -->
         </div>
 
+       
+
         <div class="authorIntro_rightside">
-        <div class="rightside_title">STORIES FROM TOSHI</div>
+            <div class="rightside_title">STORIES FROM TOSHI</div>
             <div class="nameData">
                 <img class="testImg" src="">
                 <div class="test_name_location">
@@ -42,40 +68,15 @@
                     <p class="testLocation"></p> 
                 </div>
             </div>
-            
+
             <div class="authorIntro_rightside_article">
                 <div class="authorIntro_articles">ARTICLES</div>
-                <?php $userId = get_query_var('author'); ?>
-                    <?php $user = get_userdata($userId); ?>
-                        <h1><?php echo $user->display_name; ?><span></span></h1>
-                    
-                    <?php if (!empty($user->description)) { ?>
-                        <p><?php echo $user->description; ?></p>
-                    <?php } ?>
-                    
-                    <?php $posts = get_posts("author=$userId&orderby=date&post_type=post&numberposts=1000"); ?>
-                    <?php if (!empty($posts)) { ?>
-                        <ul> 
-                            <?php foreach( $posts as $post ) : setup_postdata($post); ?>
-                            <div class="articles_list">
-                            <?php echo get_the_date("j.n.Y");?>
-                            <?php //the_author_login(); ?>
-                            <?php $cat = get_the_category(); ?>
-                            <?php $cat = $cat[0]; ?>
-                            <?php echo get_cat_name($cat->term_id); ?>
-                                <div class="the_excerpt">
-                                    <?php the_excerpt(); ?>
-                                </div>
-                            </div>
-                        </ul>
-                            
-                        <?php endforeach; ?>
-                <?php wp_reset_postdata(); ?>
-                <?php } ?>
-            
-            </div> <!-- authorIntro_rightside_article -->
-        </div>  <!-- authorIntro_rihghtside -->
+                <?php the_author_login(); ?>
+            </div>
 
-        
+        </div> 
+
+            
     </div>
+
 </section>

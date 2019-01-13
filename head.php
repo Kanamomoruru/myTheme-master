@@ -23,7 +23,6 @@
                             <div class="colorLayer1"></div>
                             <div class="title-h1">spinning</div>
                         </div>
-
                     </div>
                     
                     
@@ -43,8 +42,8 @@
                 <div class="background-number1">01
                     <div class="logindiv">
                         <img class="login_img" src="<?php echo get_template_directory_uri(); ?>/images/login.png">
-                        <a href="<?php echo home_url('/login')?>"></a>
-                        <p>LOGIN/SIGN UP</p>
+                        <!-- <a href="<?php echo home_url('/login')?>"></a>
+                        <p>LOGIN/SIGN UP</p> -->
                     </div>
                     <div class="top-video">
                         <video class="head-video" controls width="300" height="200" poster="<?php echo get_template_directory_uri(); ?>/images/demovideo.jpg">

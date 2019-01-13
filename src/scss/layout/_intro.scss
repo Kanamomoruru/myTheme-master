@@ -8,36 +8,116 @@
 
 
     @include screen-notebook {
-    //    height: 82vh;
+        height: 83vh;
     }
 
     .intro-leftside {
         padding-left: 5.5vw;
         // margin-top: 8vh;
 
+        @include screen-notebook {
+            // padding-left: 0vw;
+            margin-top: 5vh;
+            }
+
         .ib-h1 {
             display: flex;
             position: relative;
 
-            .intro-h1 {
-                font-size: 40px;
-                font-weight: bold;
-                letter-spacing: 1;
-                width: 60%;
-                color: #ff0000;
-                overflow-wrap: break-word;
-                position: relative;
-
-                &:after {
-                    content: "";
-                    position: absolute;
-                    left: -40px;
-                    top: 10%;
-                    height: 9vh;
-                    width: 1.5vw;
-                    background: #ff0000;
+            @include screen-notebook {
+                    width: 60vw;
                 }
-            }
+
+                .big_title {
+
+                    @include screen-notebook {
+                            margin-left: -20vw;
+                            
+                        }
+
+                    #box4, #box5 {
+                        height: 120px;
+                        width: 500px;
+                        margin-left: 300px;
+                        transform: translateY(-50%);
+                        overflow: hidden;
+        
+                        @include screen-notebook {
+                            height: 60px;
+                            width: 500px;
+                            //margin-left: 300px;
+                            transform: translateY(-50%);
+                            overflow: hidden;
+                                
+                        }
+        
+                        .colorLayer2 {
+                            height: 120px;
+                            width: 500px;
+                            background-color: #ff0000;
+                            position: absolute;
+                            left: -500px;
+                            //z-index: 9;
+        
+                            @include screen-notebook {
+                                height: 60px;
+                                width: 500px;
+                                background-color: #ff0000;
+                                position: absolute;
+                                left: -500px;
+                                    
+                            }
+                        }
+        
+                        .intro-h1 {
+                            font-size: 80px;
+                            color: #ff0000;
+                            //line-height: 10px;
+                            position: absolute;
+                            left: -500px;
+                            //z-index: 1;
+        
+                            @include screen-notebook {
+                                font-size: 40px;
+                                color: #ff0000;
+                                //line-height: 10px;
+                                position: absolute;
+                                left: -500px;
+                                    
+                            }
+        
+                            // &:after {
+                            //     content: "";
+                            //     position: absolute;
+                            //     left: -18px;
+                            //     top: 0;
+                            //     height: 9vh;
+                            //     width: 2.5vw;
+                            //     background: #ff0000;
+                            // }
+                        }               
+                    }
+                }
+
+            // .intro-h1 {
+            //     font-size: 40px;
+            //     font-weight: bold;
+            //     letter-spacing: 1;
+            //     width: 60%;
+            //     color: #ff0000;
+            //     overflow-wrap: break-word;
+            //     position: relative;
+
+            //     &:after {
+            //         content: "";
+            //         position: absolute;
+            //         left: -40px;
+            //         top: 10%;
+            //         height: 9vh;
+            //         width: 1.5vw;
+            //         background: #ff0000;
+            //     }
+            // }
 
             .background-number2 {
                 font-size: 32em;
@@ -59,6 +139,8 @@
             padding-top: 4vh;
             padding-left: 4vw;
             width: 30%;
+            //background-color: transparent;
+            opacity: 0;
         }
 
         // .intro-small2 {
@@ -75,9 +157,12 @@
             direction: ltr;
             text-align: justify;
             // position: relative;
+            //background-color: transparent;
+            opacity: 0;
 
             @include screen-notebook {
                 padding-top: 1vh;
+                
             }
 
             .exprenation {
@@ -99,30 +184,30 @@
             }
         }
 
-        .rcBtn2 {
-            position: absolute;
-            // top: 105%;
-            left: 30%;
-            display: block;
-            width: 120px;
-            padding: 0.5em;
-            margin: 2rem;
-            text-align: center;
-            text-decoration: none;
-            color: #ff0000;
-            border: 2px solid #ff0000;
-            border-radius: 3px;
-            transition: .4s;
+        // .rcBtn2 {
+        //     position: absolute;
+        //     // top: 105%;
+        //     left: 30%;
+        //     display: block;
+        //     width: 120px;
+        //     padding: 0.5em;
+        //     margin: 2rem;
+        //     text-align: center;
+        //     text-decoration: none;
+        //     color: #ff0000;
+        //     border: 2px solid #ff0000;
+        //     border-radius: 3px;
+        //     transition: .4s;
 
-            &:hover {
-                background: #ff0000;
-                color: #fff;
-            }
+        //     &:hover {
+        //         background: #ff0000;
+        //         color: #fff;
+        //     }
 
-            @include screen-notebook {
-                top: 190vh;;
-            }
-        }
+        //     @include screen-notebook {
+        //         top: 190vh;;
+        //     }
+        // }
     }
 
     .intro-rightside {
@@ -138,6 +223,7 @@
             position: absolute;
             top: 130%;
             left: 45%;
+            opacity: 0;
 
             @include screen-notebook {
                 height: 8%;
@@ -151,6 +237,8 @@
             left: 47%;
             display: block;
             padding: 2rem;
+            opacity: 0;
+     
 
             .introBtn {
                 text-decoration: none;
@@ -166,14 +254,207 @@
             position: absolute;
             top: 65%;
             left: 60%;
+            opacity: 0;
 
             @include screen-notebook {
                 height: 1000px;
                 width: 500px;
-                top: 70%;
-                left: 55%;
+                top: 65%;
+                left: 58%;
             }
         }
     }
 }
 
+
+
+//左から
+.isPlay5 {
+    animation-name: play5;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    position: relative;
+    opacity: 1 !important;
+  }
+
+.isPlay5:before {
+    // animation-name: maskOut5;
+    // animation-duration: .5s;
+    // animation-delay: .5s;
+    // animation-fill-mode: forwards;
+    // animation-timing-function: cubic-bezier(.8,0,.5,1);
+    // content: '';
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: 1;
+    // width: 100%;
+    // height: 100%;
+    //background-image: linear-gradient( 109.6deg,  rgb(243, 32, 32) 11.2%, rgb(247, 6, 6) 91.1% );
+  }
+  
+
+@keyframes play5 {
+    from {
+      transform: translateX(-100%);
+    }
+    
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes maskOut5 {
+    from {
+      transform: translateX(0);
+    }
+    
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+//右から
+  .isPlay6 {
+    animation-name: play6;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    position: relative;
+    opacity: 1 !important;
+  }
+
+.isPlay6:before {
+    animation-name: maskOut6;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    //background-image: linear-gradient( 109.6deg,  rgb(243, 32, 32) 11.2%, rgb(247, 6, 6) 91.1% );
+  }
+  
+
+@keyframes play6 {
+    from {
+      transform: translateX(100%);
+    }
+    
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes maskOut6 {
+    from {
+      transform: translateX(0);
+    }
+    
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+//上から
+  .isPlay7 {
+    animation-name: play7;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    position: relative;
+    opacity: 1 !important;
+  }
+
+.isPlay7:before {
+    animation-name: maskOut7;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    //background-image: linear-gradient( 109.6deg,  rgb(243, 32, 32) 11.2%, rgb(247, 6, 6) 91.1% );
+  }
+  
+
+@keyframes play7 {
+    from {
+      transform: translateY(-100%);
+    }
+    
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes maskOut7 {
+    from {
+      transform: translateX(0);
+    }
+    
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+
+  //下から
+  .isPlay8 {
+    animation-name: play8;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    position: relative;
+    opacity: 1 !important;
+  }
+
+.isPlay8:before {
+    animation-name: maskOut8;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.8,0,.5,1);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    //background-image: linear-gradient( 109.6deg,  rgb(243, 32, 32) 11.2%, rgb(247, 6, 6) 91.1% );
+  }
+  
+
+@keyframes play8 {
+    from {
+      transform: translateY(100%);
+    }
+    
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes maskOut8 {
+    from {
+      transform: translateX(0);
+    }
+    
+    to {
+      transform: translateY(-100%);
+    }
+  }
+
+  

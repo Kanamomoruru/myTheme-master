@@ -141,3 +141,10 @@ function login_init() {
 }
 //ツールバー表示、非表示
 add_filter('show_admin_bar', '__return_false');
+
+//リンク追加
+function my_excerpt_more($post) {
+    return '<a href="'. get_permalink($post->ID) . '">' . '…続きを読む' . '</a>';
+}
+add_filter('excerpt_more', 'my_excerpt_more');
+    

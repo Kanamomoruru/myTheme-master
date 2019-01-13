@@ -1,14 +1,15 @@
 .authorIntro {
     background-image: url(images/background2.png);
     background-repeat: no-repeat;
-    background-size: 1249px 1060px;
+    //background-size: 1249px 1060px;
     position: relative;
     display: flex;
     height: 100vh;
+    margin-top: 200vh;
 
 
     @include screen-notebook {
-        background-size: 900px 1060px;
+        background-size: 1020px 1060px;
     }
 
     .background_number5 {
@@ -19,7 +20,8 @@
 
 
     @include screen-notebook {
-        font-size: 28em
+        font-size: 28em;
+        padding-left: 20vw;
     }
 
 
@@ -59,7 +61,7 @@
 
             @include screen-notebook {
                 font-size: 22px;
-                width: 20%;
+                width: 45%;
                 left: 10vw;
             }
         }
@@ -68,7 +70,7 @@
             width: 30%;
 
             @include screen-notebook {
-                width: 40%;
+                width: 100%;
             }
         }
     }
@@ -76,37 +78,122 @@
     .about_author {
         padding-top: 17vh;
         padding-left: 5vw;
+
+        @include screen-notebook {
+            padding-left: 0;
+        }
+
+        p {
+            @include screen-notebook {
+                padding-top: 40vh;
+                margin-left: -10vw;
+            }
+        }
     }
 
     &_rightside {
         padding: 2rem;
 
-        .author_chapter_img {
-            border-radius: 50%;
-            width: 70px;
-            height: 70px;
+        @include screen-notebook {
+            margin-left: -10vw;
+            padding-top: 10vh;
+        }
+
+        .rightside_title {
+            position: relative;
+            @include screen-notebook {
+                white-space: nowrap;
+
+                
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 2vh;
+                left: 14vw;
+                height: 1px;
+                width: 20em;
+                background-color: #000;
+            }
+        }
+
+        .nameData {
+            //display: flex;
+           
+
+            @include screen-notebook {
+                padding-top: 5vh; 
+
+            }
 
         }
 
-        .author_chapter_info {
-            .author_chapter_fname_age {
-                padding-left: 10vw;
+        .testImg {
+            border-radius: 50%;
+        
 
+        }
+
+        .test_name_location {
+        
+
+            .testName {
+
+                @include screen-notebook {
+                    padding-left: 10vw; 
+                    margin-top: -8vh;  
+                    //padding-left: 2rem; 
+                }
+                
+    
+            }
+    
+            .testLocation {
+                @include screen-notebook {
+                    padding-left: 10vw; 
+                    white-space: nowrap;
+                }
             }
 
-            .author_chapter_location {
-                padding-left: 10vw;
+        }
+
+        .authorIntro_rightside_article {
+
+            @include screen-notebook {
+                padding-top: 30vh;
             }
+           
+            .authorIntro_articles {
+                position: relative;
 
-            .author_chapter_story {
-                font-size: 14px;
-                position: absolute;
-                left: 85vw;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 2vh;
+                    left: 7vw;
+                    height: 1px;
+                    width: 30em;
+                    background-color: #000;
+                }
 
+                .articles_list {
+                    white-space: nowrap;
+                    @include screen-notebook {
+
+                    }
+
+                    .the_excerpt {
+                        white-space: nowrap;
+
+                        @include screen-notebook {
+                        
+                        }
+
+                    }
+                }
 
             }
         }
     }
-
-
 }

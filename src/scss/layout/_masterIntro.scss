@@ -6,137 +6,10 @@
     //display: flex;
     height: 100vh;
 
-    // .slide {
-    //     padding: 5rem;
-
-    //     .card {
-
-    //         @include screen-notebook {
-    //             width: 115vmin;
-    //             height: 57vmin;
-    //             background-color: transparent;
-    //         }
-    //         .card__img {
-
-    //            .mentor_img {
-
-    //                @include screen-notebook {
-    //                     width: 13vw;
-    //                     height: 40vh;
-    //                }
-    //            }
-
-    //         }
-
-    //         .card__content {
-
-    //             @include screen-notebook {
-    //                 //padding: 10% 5%;
-    //                 box-sizing: border-box;
-    //                 width: 50%;
-    //             }
-
-    //             .card__content-theme {
-
-    //             }
-
-    //             .card__content-paragraph {
-
-    //             }
-    //         }
-
-        //     .card__content-link{
-        //         color: #BA3428;
-        //         font-size: 1.8vmin;
-        //         display: block;
-        //         cursor: pointer;
-        //         opacity: 0.7;
-        //         transition: opacity 0.3s ease;
-              
-        //         &:hover{
-        //           opacity: 1;
-        //         }
-              
-        //         &:after{
-        //           content: ' →'
-        //         }
-        //       }
-              
-        //       .prevnext{
-        //         position: absolute;
-        //         width: 4vmin;
-        //         height: 8vmin;
-        //         right: 2%;
-        //         bottom: 0;
-        //         top: 0;
-        //         margin: auto 0;
-        //       }
-              
-        //       .prevnext-button{
-        //         width: 100%;
-        //         height: 50%;
-        //         border: 0;
-        //         background-color: transparent;
-        //         font-size: 20px;
-        //       }
-              
-        //       #prev, #next{
-        //         position: relative;
-        //         cursor: pointer;
-        //         color: #000;
-                
-        //         &:hover{
-                
-        //           &:after, &:after{
-        //             opacity: 1;
-        //           }
-        //         }
-        //       }
-              
-        //       #prev:after, #next:after{
-        //         position: absolute;
-        //         width: 100%;
-        //         height: 100%;
-        //         left: 0;
-        //         right: 0;
-        //         top: 0;
-        //         bottom: 0;
-        //         margin: auto;
-        //         opacity: 0.6;
-        //         transition: opacity 0.3s ease;
-        //       }
-              
-        //       #prev:after{
-        //         content: '↑';
-        //       }
-              
-        //       #next:after{
-        //         content: '↓';
-        //       }
-        // }
-
-        // .mentor_about {
-        //     //width: 50%;
-        //     text-align: center;
-        //     padding-left: 20vw;
-        //     padding-top: 5vh;
-
-        //     .mentor_pic {
-        //         .mentor_name {
-        //             .mentor_purpose {}
-        //         }
-        //     }
-        //}
-    //}
-
-
-
-
-
-
+    
     .mentor_right {
         padding: 2rem;
-
+     
 
         .background_number6 {
             font-size: 32em;
@@ -146,7 +19,8 @@
             @include screen-notebook {
                 font-size: 26em;
                 padding-left: 35vw;
-                margin-top: -13vh;
+                margin-top: -340vh;
+             
             }
         }
 
@@ -226,13 +100,15 @@
     width: 100%;
     height: 100%;
     padding-left: 10vw; 
+    padding-top: 10vh;
   }
   
   .card{
     width: 50vmin;
     height: 37vmin;
     display: flex;
-    background-color: #fff;
+    background-color:transparent;
+    
   }
   
   .card__img{
@@ -241,20 +117,29 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+
+    .mentorImg {
+
+        @include screen-notebook {
+            width: 15vw;
+            height: 45vh
+        }
+        
+    }
     
   }
   
-  #img01{
-    background-image: url("http://www.movingimagesmedia.com/images/gallery/10.jpg");
-  }
+//   #img01{
+//     background-image: url("http://www.movingimagesmedia.com/images/gallery/10.jpg");
+//   }
   
-  #img02{
-    background-image: url("http://www.movingimagesmedia.com/images/gallery/9.jpg");
-  }
+//   #img02{
+//     background-image: url("http://www.movingimagesmedia.com/images/gallery/9.jpg");
+//   }
   
-  #img03{
-    background-image: url("http://www.movingimagesmedia.com/images/gallery/8.jpg");
-  }
+//   #img03{
+//     background-image: url("http://www.movingimagesmedia.com/images/gallery/8.jpg");
+//   }
   
   .card__content{
     //padding: 10% 5%;
@@ -263,25 +148,71 @@
   }
   
   .card__content-theme{
-    font-weight: 900;
-    font-size: 1.7vmin; 
+    //font-weight: 900;
+    //font-size: 1.7vmin; 
   }
   
   .card__content-header{
-    font-weight: 900;
-    font-size: 54px;
-    font-size: 7vmin;
-    text-transform: capitalize;
-    letter-spacing: 0.01em;
-    line-height: 0.91;
-    margin: 3vmin 0 3.5vmin;  
+    // font-weight: 900;
+    // font-size: 54px;
+    // font-size: 7vmin;
+    // text-transform: capitalize;
+    // letter-spacing: 0.01em;
+    // line-height: 0.91;
+    // margin: 3vmin 0 3.5vmin; 
+        position: relative;
+
+    @include screen-notebook {
+        padding-top: 15vh;
+    } 
+
+    &:after {
+        @include screen-notebook {
+            content: "";
+            position: absolute;
+            top: 17vh;
+            left: 6vw;
+            height: 1px;
+            width: 7vw;
+            background-color: #000; 
+        }
+          
+    }
   }
   
   .card__content-paragraph{
-    font-size: 1.0vmin;
-    line-height: 1.7;
-    font-weight: 300;
-    margin-bottom: 2.5vmin;
+
+    @include screen-notebook {
+       
+    }
+    
+
+    .shisonImg {
+        @include screen-notebook {
+            border-radius: 50%;
+        }
+
+        .shison_name_location {
+            
+            .shisonName {
+
+                @include screen-notebook {
+                    //margin-left: 10vw; 
+                    //margin-top: -8vh;  
+                    //padding-left: 2rem; 
+                    
+                }
+            }
+    
+            .shisonLocation {
+                @include screen-notebook {
+                    //padding-left: 10vw; 
+                    //white-space: nowrap;
+                }
+            }
+
+        }
+    }
   }
   
   .card__content-link{
@@ -307,7 +238,7 @@
     height: 8vmin;
     right: 5%;
     bottom: 0;
-    top: 0;
+    top: -40vh;
     margin: auto 0;
   }
   
@@ -316,7 +247,8 @@
     height: 50%;
     border: 0;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 14px;
+    white-space: nowrap;
   }
   
   #prev, #next{
@@ -346,7 +278,7 @@
   }
   
   #prev:after{
-    content: '↑';
+    content: 'PREV MENTOR';
   }
   
   #next:after{

@@ -5,7 +5,7 @@
             <?php
                 $args = array (
                     'post_type' => 'chapter',
-                    'post_per_page' => '6',
+                    'post_per_page' => '3',
                 );
                 $chapters = get_posts($args);  //defined chapters
 

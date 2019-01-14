@@ -1918,7 +1918,7 @@ License URI:
         .masterIntro .mentor_right .background_number6 {
           font-size: 26em;
           padding-left: 35vw;
-          margin-top: -13vh; } }
+          margin-top: -340vh; } }
     .masterIntro .mentor_right .mentor_title {
       padding: 2rem;
       position: absolute;
@@ -1975,7 +1975,8 @@ License URI:
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding-left: 10vw; }
+  padding-left: 10vw;
+  padding-top: 10vh; }
 
 .card {
   width: 50vmin;
@@ -1983,7 +1984,7 @@ License URI:
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #fff; }
+  background-color: transparent; }
 
 .card__img {
   background-position: center;
@@ -1991,39 +1992,34 @@ License URI:
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat; }
-
-#img01 {
-  background-image: url("http://www.movingimagesmedia.com/images/gallery/10.jpg"); }
-
-#img02 {
-  background-image: url("http://www.movingimagesmedia.com/images/gallery/9.jpg"); }
-
-#img03 {
-  background-image: url("http://www.movingimagesmedia.com/images/gallery/8.jpg"); }
+  @media screen and (min-width: 1280px) {
+    .card__img .mentorImg {
+      width: 15vw;
+      height: 45vh; } }
 
 .card__content {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 50%; }
 
-.card__content-theme {
-  font-weight: 900;
-  font-size: 1.7vmin; }
-
 .card__content-header {
-  font-weight: 900;
-  font-size: 54px;
-  font-size: 7vmin;
-  text-transform: capitalize;
-  letter-spacing: 0.01em;
-  line-height: 0.91;
-  margin: 3vmin 0 3.5vmin; }
+  position: relative; }
+  @media screen and (min-width: 1280px) {
+    .card__content-header {
+      padding-top: 15vh; } }
+  @media screen and (min-width: 1280px) {
+    .card__content-header:after {
+      content: "";
+      position: absolute;
+      top: 17vh;
+      left: 6vw;
+      height: 1px;
+      width: 7vw;
+      background-color: #000; } }
 
-.card__content-paragraph {
-  font-size: 1.0vmin;
-  line-height: 1.7;
-  font-weight: 300;
-  margin-bottom: 2.5vmin; }
+@media screen and (min-width: 1280px) {
+  .card__content-paragraph .shisonImg {
+    border-radius: 50%; } }
 
 .card__content-link {
   color: #BA3428;
@@ -2045,7 +2041,7 @@ License URI:
   height: 8vmin;
   right: 5%;
   bottom: 0;
-  top: 0;
+  top: -40vh;
   margin: auto 0; }
 
 .prevnext-button {
@@ -2053,7 +2049,8 @@ License URI:
   height: 50%;
   border: 0;
   background-color: transparent;
-  font-size: 20px; }
+  font-size: 14px;
+  white-space: nowrap; }
 
 #prev, #next {
   position: relative;
@@ -2077,7 +2074,7 @@ License URI:
   transition: opacity 0.3s ease; }
 
 #prev:after {
-  content: '↑'; }
+  content: 'PREV MENTOR'; }
 
 #next:after {
   content: 'NEXT MENTOR'; }

@@ -399,5 +399,9 @@ $.ajax({
     $(".testName").html(data.results[0].name.first);
     $(".testLocation").html(data.results[0].location.city);
 
+    $(".mentorImg").attr("src", data.results[0].picture.medium);
+    $(".shisonImg").attr("src", data.results[0].picture.medium);
+    $(".shisonName").html(data.results[0].name.first);
+    $(".shisonLocation").html(data.results[0].location.city);
   }
 });

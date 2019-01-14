@@ -147,4 +147,14 @@ function my_excerpt_more($post) {
     return '<a href="'. get_permalink($post->ID) . '">' . '…続きを読む' . '</a>';
 }
 add_filter('excerpt_more', 'my_excerpt_more');
-    
+
+
+//プロフィール項目の追加
+function my_user_meta($wb) {
+    //項目の追加
+    $wb['twitter'] = 'twitter';
+    $wb['facebook'] = 'facebook';
+    $wb['position'] = '役職';
+    return $wb;
+}
+add_filter('user_contactmethods', 'my_user_meta', 10, 1);

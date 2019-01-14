@@ -66,27 +66,45 @@
             }
         }
 
-        .author_sentence {
-            width: 30%;
+        .authorIntro_description {
+            //width: 30%;
 
             @include screen-notebook {
-                width: 100%;
+                //width: 100%;
+            }
+
+            p {
+                @include screen-notebook {
+                    width: 80%;
+                    font-size: 14px;
+                }
             }
         }
     }
 
     .about_author {
-        padding-top: 17vh;
-        padding-left: 5vw;
+        // padding-top: 17vh;
+        // padding-left: 5vw;
 
         @include screen-notebook {
-            padding-left: 0;
+            padding:2rem;
+            text-align: center;
+            margin-left: -20vw;
+            margin-top: 10vh;
         }
 
-        p {
+        .author_pic {
             @include screen-notebook {
-                padding-top: 40vh;
-                margin-left: -10vw;
+                
+              
+
+            }
+        }
+
+        .author_name_position {
+
+            @include screen-notebook {
+              
             }
         }
     }
@@ -95,8 +113,8 @@
         padding: 2rem;
 
         @include screen-notebook {
-            margin-left: -10vw;
-            padding-top: 10vh;
+            margin-left: 3vw;
+            padding-top: 11vh;
         }
 
         .rightside_title {
@@ -162,6 +180,7 @@
 
             @include screen-notebook {
                 padding-top: 30vh;
+                margin-left: -5vw;
             }
            
             .authorIntro_articles {
@@ -178,16 +197,14 @@
                 }
 
                 .articles_list {
-                    white-space: nowrap;
                     @include screen-notebook {
 
                     }
 
                     .the_excerpt {
-                        white-space: nowrap;
 
                         @include screen-notebook {
-                        
+                            
                         }
 
                     }

@@ -1,3 +1,13 @@
+<?php
+/*
+Template Name: chaptersMain
+*/
+get_header();
+ ?>
+
+
+<?php get_template_part('navbar'); ?>
+
 <section class="display-scroll">
 <div class="chapterMain section-content">
     <div class="background-number4">04</div>
@@ -65,12 +75,26 @@
                 </div>
             </div>
         </div>
+<!-- 
+        <ul class="categories">
+        <?php 
+            wp_list_categories('title_li');
+        ?>
+        </ul> -->
 
 <!-- 投稿ページの出力　-->
+
+
+
+<!-- 全カテゴリ　-->
+<div class="tabmenu tabactive mr01">News</div>
+<div class="tabcontent">
+<dl>
 <?php
     $wp_query = new WP_Query();
     $param = array(
-        'posts_per_page' => '3', //表示件数。-1なら全件表示
+        'category_name' => 'news',
+        'posts_per_page' => '5', //表示件数。-1なら全件表示
         'post_type' => 'chaptermain', //カスタム投稿タイプの名称を入れる
     );
     $wp_query->query($param);
@@ -83,20 +107,7 @@
     $cm_sentence = get_field('cm_sentence', $chaptermain);
 ?>
 
-<ul>
-<?php
-$terms = get_the_terms($post->ID,'chapterpost');
-foreach($terms as $term1) :
-echo $term1->name;
-if ($term1 !== end($terms)) {
-    echo ', ';
-}
-endforeach;
-?>
-</ul>
-
-
- <!-- 右側の投稿ページ -->
+<dt>
 <div class="post_side">
     <!-- <ul class="post_content"> -->
         <!-- <li> -->
@@ -115,12 +126,169 @@ endforeach;
        
     <!-- </ul> -->
 </div>
+</dt>
 
-<!-- /.event-detail -->
 <?php endwhile; ?>
 <?php wp_reset_postdata(); ?>
 <?php else: ?>
 <!-- 投稿が無い場合の処理 -->
 <?php endif; ?>
+
+</dl>
+</div>
+
+
+
+
+
+<!-- カテゴリ１　-->
+<div class="tabmenu mr01">Test1</div>
+<div class="tabcontent">
+<dl>
+<?php
+    $wp_query = new WP_Query();
+    $param = array(
+        'category_name' => 'test1',
+        'posts_per_page' => '3', //表示件数。-1なら全件表示
+        'post_type' => 'chaptermain', //カスタム投稿タイプの名称を入れる
+    );
+    $wp_query->query($param);
+    if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post();
+
+    //chaptersmain呼び出し
+    $cm_pic = get_field('cm_pic', $chaptermain);
+    $cm_title = get_field('cm_title', $chaptermain); 
+    $cm_author_name = get_field('cm_author_name', $chaptermain);
+    $cm_sentence = get_field('cm_sentence', $chaptermain);
+?>
+
+<dt>
+<div class="post_side category1">
+    <!-- <ul class="post_content"> -->
+        <!-- <li> -->
+        <?php 
+            if( !empty($cm_pic) ): ?>
+            <div class="post_img">
+                <img src="<?php echo $cm_pic['url']; ?>" alt="<?php echo $cm_pic['alt']; 
+                ?>" />
+            </div>
+        <?php endif; ?> 
+        <div class="post_title"><?php echo $cm_title; ?></div>
+        <div class="post_author_name">By <?php echo $cm_author_name; ?></div>
+        <div class="post_sentence"><p><?php echo $cm_sentence; ?></p></div>
+
+        <!-- </li> -->
+       
+    <!-- </ul> -->
+</div>
+</dt>
+
+<?php endwhile; ?>
+<?php wp_reset_postdata(); ?>
+<?php else: ?>
+<!-- 投稿が無い場合の処理 -->
+<?php endif; ?>
+
+</dl>
+</div>
+
+
+<!-- カテゴリ２　-->
+<div class="tabmenu mr01">Test２</div>
+<div class="tabcontent">
+<dl>
+<?php
+    $wp_query = new WP_Query();
+    $param = array(
+        'category_name' => 'test2',
+        'posts_per_page' => '3', //表示件数。-1なら全件表示
+        'post_type' => 'chaptermain', //カスタム投稿タイプの名称を入れる
+    );
+    $wp_query->query($param);
+    if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post();
+
+    //chaptersmain呼び出し
+    $cm_pic = get_field('cm_pic', $chaptermain);
+    $cm_title = get_field('cm_title', $chaptermain); 
+    $cm_author_name = get_field('cm_author_name', $chaptermain);
+    $cm_sentence = get_field('cm_sentence', $chaptermain);
+?>
+
+<dt>
+<div class="post_side category2">
+        <?php 
+            if( !empty($cm_pic) ): ?>
+            <div class="post_img">
+                <img src="<?php echo $cm_pic['url']; ?>" alt="<?php echo $cm_pic['alt']; 
+                ?>" />
+            </div>
+        <?php endif; ?> 
+        <div class="post_title"><?php echo $cm_title; ?></div>
+        <div class="post_author_name">By <?php echo $cm_author_name; ?></div>
+        <div class="post_sentence"><p><?php echo $cm_sentence; ?></p></div>
+</div>
+</dt>
+
+<?php endwhile; ?>
+<?php wp_reset_postdata(); ?>
+<?php else: ?>
+<!-- 投稿が無い場合の処理 -->
+<?php endif; ?>
+
+</dl>
+</div>
+
+
+<!-- カテゴリ3　-->
+<div class="tabmenu">Test3</div>
+<div class="tabcontent">
+<dl>
+<?php
+    $wp_query = new WP_Query();
+    $param = array(
+        'category_name' => 'test3',
+        'posts_per_page' => '3', //表示件数。-1なら全件表示
+        'post_type' => 'chaptermain', //カスタム投稿タイプの名称を入れる
+    );
+    $wp_query->query($param);
+    if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post();
+
+    //chaptersmain呼び出し
+    $cm_pic = get_field('cm_pic', $chaptermain);
+    $cm_title = get_field('cm_title', $chaptermain); 
+    $cm_author_name = get_field('cm_author_name', $chaptermain);
+    $cm_sentence = get_field('cm_sentence', $chaptermain);
+?>
+
+<dt>
+<div class="post_side category3">
+        <?php 
+            if( !empty($cm_pic) ): ?>
+            <div class="post_img">
+                <img src="<?php echo $cm_pic['url']; ?>" alt="<?php echo $cm_pic['alt']; 
+                ?>" />
+            </div>
+        <?php endif; ?> 
+        <div class="post_title"><?php echo $cm_title; ?></div>
+        <div class="post_author_name">By <?php echo $cm_author_name; ?></div>
+        <div class="post_sentence"><p><?php echo $cm_sentence; ?></p></div>
+</div>
+</dt>
+
+<?php endwhile; ?>
+<?php wp_reset_postdata(); ?>
+<?php else: ?>
+<!-- 投稿が無い場合の処理 -->
+<?php endif; ?>
+
+</dl>
+</div>
+
+
+
+
 </div> <!-- chapterMain -->
 </section>
+
+<?php 
+get_footer();

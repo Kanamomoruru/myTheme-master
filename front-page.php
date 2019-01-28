@@ -23,7 +23,7 @@
 <?php get_template_part('intro'); ?>
 
 <?php get_template_part('chaptersIntro'); ?>
-<?php get_template_part('chaptersMain'); ?>
+<?php //get_template_part('chaptersMain'); ?>
 <?php get_template_part('authorIntro'); ?>
 <?php get_template_part('masterIntro'); ?>
 <?php //get_sidebar(); ?>

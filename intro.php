@@ -87,11 +87,16 @@
             <div class="line1"></div>
         </div>
         <div class="introBtns">
-            <a href="" onclick="display_exprenation('no1')" class="introBtn 01Author"><strong>01</strong> Author</a>
-            <a href="#" onclick="display_exprenation('no2')" class="introBtn 02Master"><strong>02</strong> Mentor</a>
+            <a href="javascript:;" onclick="display_exprenation('no1')" class="introBtn 01Author"><strong>01</strong> Author</a>
+            <a href="javascript:;" onclick="display_exprenation('no2')" class="introBtn 02Master"><strong>02</strong> Mentor</a>
             <a href="#" onclick="display_exprenation('no3')" class="introBtn 03Offspring"><strong>03</strong> Shison</a>
             <a href="#" onclick="display_exprenation('no4')" class="introBtn 04Sp"><strong>04</strong> Social-parents</a>
         </div>
+
+        <div id="JS">
+            <p>test</p>
+        </div>
+
         <video class="intro-video" controls width="600" height="1300" poster="<?php echo get_template_directory_uri(); ?>/images/demovideo.jpg">
             <source src="<?php echo get_template_directory_uri(); ?>/images/demovideo.mp4" type="video/mp4" />
         </video>

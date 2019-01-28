@@ -65,6 +65,7 @@
 
   &__menu__item {
     margin: 40px 0;
+    //opacity: 0;
 
     & a {
       color: #000;
@@ -76,6 +77,14 @@
 
       &:hover {
         color: #fff;
+      }
+    }
+
+    &__detail {
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
       }
     }
   }

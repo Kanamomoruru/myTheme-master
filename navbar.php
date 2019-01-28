@@ -8,8 +8,8 @@
     <nav class="gnav">
         <div class="gnav__wrap">
             <ul class="gnav__menu" style="list-style:none;">
-                <li class="gnav__menu__item"><a href="<?php echo get_permalink(66); ?>">CHAPTERS</a></li>
-                <li class="gnav__menu__item"><a href="">STORIES</a></li>
+                <li class="gnav__menu__item"><a href="<?php echo get_permalink(107); ?>">CHAPTERS</a><span class="gnav__menu__item__detail">test</span></li>
+                <li class="gnav__menu__item"><a href="<?php echo get_permalink(89); ?>">STORIES</a></li>
                 <li class="gnav__menu__item"><a href="">STORE</a></li>
                 <li class="gnav__menu__item"><a href="<?php echo home_url('/about')?>">ABOUT US</a></li>
             </ul>

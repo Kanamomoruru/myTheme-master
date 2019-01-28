@@ -7,17 +7,6 @@ window.addEventListener("load", function () {
     $(".gnav").fadeToggle();
   });
 
-  // function display_exprenation(no) {
-  //     if (no == "no1") {
-  //         document.getElementById('chage_exprenation').innerHTML = "<p>Author</p>";
-  //     } else if (no == "no2") {
-  //         document.getElementById('chage_exprenation').innerHTML = "<p>Mentor</p>";
-  //     } else if (no == "no3") {
-  //         document.getElementById('chage_exprenation').innerHTML = "<p>Shison</p>";
-  //     } else if (no == "no4") {
-  //         document.getElementById('chage_exprenation').innerHTML = "<p>Social-parents</p>";
-  //     }
-  // }
 
   //animation top page
   var elem1 = $('.img-top');
@@ -199,52 +188,33 @@ window.addEventListener("load", function () {
 
 
     if ($(this).scrollTop() >= 1710 && $(this).scrollTop() <= 1760) {
-      $("#box7 .colorLayer4").animate({ left: "0px" }, 300);
-      $("#box7 .colorLayer4").delay(400).animate({ left: "700px" }, 300);
-      $("#box7 .chapterMain-h1").animate({ left: "0px" });
-      $(".colorLayer4").delay(400).animate({ width: "0px" }, 300);
 
-      var elem12 = $('.chapterMain-contents');
-      elem12.each(function () {
-
-        var isPlay11 = 'isPlay11';
-
-        var elemOffset = $(this).offset().top;
-        var scrollPos = $(window).scrollTop();
-        var wh = $(window).height();
-
-        $(this).addClass(isPlay11);
-      });
 
     }
+  });
+
+  //chaptersMain
+  $("#box7 .colorLayer4").animate({ left: "0px" }, 300);
+  $("#box7 .colorLayer4").delay(400).animate({ left: "700px" }, 300);
+  $("#box7 .chapterMain-h1").animate({ left: "0px" });
+  $(".colorLayer4").delay(400).animate({ width: "0px" }, 300);
+
+  var elem12 = $('.chapterMain-contents');
+  elem12.each(function () {
+
+    var isPlay11 = 'isPlay11';
+
+    var elemOffset = $(this).offset().top;
+    var scrollPos = $(window).scrollTop();
+    var wh = $(window).height();
+
+    $(this).addClass(isPlay11);
   });
 
 
 
 
 
-  // slider
-  if (this.document.getElementsByClassName("main-carousel").length) {
-    var flkty = new Flickity(".main-carousel", {
-      contain: true,
-      asNavFor: ".carousel-display",
-      freeScroll: true,
-      imagesLoaded: true,
-      wrapAround: true,
-      cellAlign: "center",
-      //autoPlay: 2000,
-      prevNextButtons: true,
-      pageDots: false,
-      arrowShape: {
-        x0: 10,
-        x1: 60,
-        y1: 50,
-        x2: 65,
-        y2: 45,
-        x3: 20
-      }
-    });
-  }
 
   //scrollify
   var option = {
@@ -275,6 +245,51 @@ window.addEventListener("load", function () {
   //     $section.eq(index).addClass("is-show");
   //   }
 });
+
+// slider
+if (this.document.getElementsByClassName("main-carousel").length) {
+  var flkty = new Flickity(".main-carousel", {
+    contain: true,
+    asNavFor: ".carousel-display",
+    freeScroll: true,
+    imagesLoaded: true,
+    wrapAround: true,
+    cellAlign: "center",
+    //autoPlay: 2000,
+    prevNextButtons: true,
+    pageDots: false,
+    arrowShape: {
+      x0: 10,
+      x1: 60,
+      y1: 50,
+      x2: 65,
+      y2: 45,
+      x3: 20
+    }
+  });
+
+  var transformer = new FlickityTransformer(flkty, [
+    {
+      name: 'scale',
+      stops: [
+        [-200, 0.5],
+        [0, 1],
+        [200, 0.5]
+      ]
+    },
+
+    {
+      name: 'translateX',
+      stops: [
+        [-400, 170],
+        [-200, -150],
+        [0, 0],
+        [200, 800],
+        [800, 225],
+      ]
+    },
+  ])
+}
 
 
 //Mentor slider
@@ -370,10 +385,30 @@ $slideNavPrev.click(function (e) {
 });
 
 
+//chaptersMain
+$(function () {
+  $(".tabcontent:not('.tabactive + .tabcontent')").hide();
+  $(".tabmenu").hover(function () {
+    $(this).addClass("hover")
+  },
+    function () {
+      $(this).removeClass("hover")
+    });
+  $(".tabmenu").click(function () {
+    $(".tabmenu").removeClass("tabactive");
+    $(this).addClass("tabactive");
+    $(".tabcontent:not('.tabactive + .tabcontent')").fadeOut();
+    $(".tabactive + .tabcontent").fadeIn();
+  });
+});
 
-
-
-
+function display_exprenation(no) {
+  if (no == "no1") {
+    document.getElementById("JS").innerHTML = "<p>test1</p>";
+  } else if (no == "no2") {
+    document.getElementById("JS").innerHTML = "<p>test2</p>"
+  }
+}
 
 
 

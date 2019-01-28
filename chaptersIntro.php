@@ -1,28 +1,31 @@
+
+
 <section class="display-scroll">
 <div class="chapterIntro-header section-content">
     <div class="Slider">
         <div class="chapters_list main-carousel">
-            <?php
-                $args = array (
-                    'post_type' => 'chapter',
-                    'post_per_page' => '3',
-                );
-                $chapters = get_posts($args);  //defined chapters
-
-                foreach($chapters as $chapter): //Loop
-
-                //To get data from chapter
-                $age = get_field('age', $chapter);
-                $story = get_field('story', $chapter); 
-                $picture = get_field('off_spring_pic', $chapter);
-                $firstName = get_field('firstname', $chapter);
-                $lastName = get_field('lastname', $chapter);
-                $location = get_field('location', $chapter); 
+        <?php $args = array(
+                'numberposts' => 9,                //表示（取得）する記事の数
+                'post_type' => 'chapter'    //投稿タイプの指定
+        );
+            //foreach($chapters as $chapter):
+            $posts = get_posts( $args );
+        
+            if( $posts ) : foreach( $posts as $post) : setup_postdata( $post ); 
+    
+            $age = get_field('age', $post);
+            $story = get_field('story', $post); 
+            $picture = get_field('off_spring_pic', $post);
+            $firstName = get_field('firstname', $post);
+            $lastName = get_field('lastname', $post);
+            $location = get_field('location', $post); 
+            $author = get_field('author', $post); 
             ?>
             <div class="chapter_avatar">
                 <div class="chapter_info">
                     <div class="chapter_overlay">
                         <p class="chapter_fname_age"><?php echo $firstName ;?>, <?php echo $age ;?></p>
+                        <a href="<?php the_permalink(); ?>" class="btn blue"></a>
                         <p class="chapter_lname"><?php echo $lastName ;?></p>
                         <small class="chapter_location"><?php echo $location ;?></small>
                         <h3 class="chapter_story"><?php echo $story ;?></h3>
@@ -37,7 +40,11 @@
                 <?php endif; ?> 
             </div>
         
-            <?php endforeach?> 
+            <?php //endforeach?> 
+            <?php endforeach; ?>
+            <?php else : //記事が無い場合 ?>
+            <?php endif;
+               wp_reset_postdata(); //クエリのリセット ?>
         </div>
     </div> <!-- slider -->
 

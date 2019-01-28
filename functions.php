@@ -20,7 +20,9 @@ if (!function_exists('pt_jquery_bottom')):
 wp_enqueue_script('jquery-migrate', false, array(), false, true);
 wp_enqueue_script('scrollify', 'https://cdn.jsdelivr.net/npm/jquery-scrollify@1.0.17/jquery.scrollify.min.js', array(), false, true);
 wp_enqueue_script('tweenmax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js', array(), false, true);
+wp_enqueue_script('transformer', 'https://unpkg.com/flickity-transformer/dist/flickity-transformer.pkgd.js');
 wp_enqueue_script('flickity', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js');
+
 
 
 }
@@ -161,51 +163,7 @@ add_filter('user_contactmethods', 'my_user_meta', 10, 1);
 
 
 
-//カスタム投稿タイプ
-// Register Custom Post Type
 
-// カスタム投稿タイプを定義
-add_action( 'init', 'register_cpt_team' );
- 
-function register_cpt_team() {
- 
-    $labels = array(
-        'name' => _x( 'メンバー', 'team' ),
-        'singular_name' => _x( 'メンバー', 'team' ),
-        'add_new' => _x( '新規追加', 'team' ),
-        'add_new_item' => _x( '新しいメンバープロフィールを追加', 'team' ),
-        'edit_item' => _x( 'メンバープロフィールを編集', 'team' ),
-        'new_item' => _x( '新しいメンバー', 'team' ),
-        'view_item' => _x( 'メンバープロフィールを見る', 'team' ),
-        'search_items' => _x( 'メンバー検索', 'team' ),
-        'not_found' => _x( 'プロフィールが見つかりません', 'team' ),
-        'not_found_in_trash' => _x( 'ゴミ箱にプロフィールはありません', 'team' ),
-        'parent_item_colon' => _x( '親メンバー:', 'team' ),
-        'menu_name' => _x( 'メンバー', 'team' ),
-    );
- 
-    $args = array(
-        'labels' => $labels,
-        'hierarchical' => true,
-        'description' => '経歴紹介とか',
-        'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields' ),
-        
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        
-        'show_in_nav_menus' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => true,
-        'query_var' => true,
-        'can_export' => true,
-        'rewrite' => true,
-        'capability_type' => 'post'
-    );
- 
-    register_post_type( 'team', $args );
-}
  
 // サムネイル画像を利用
 add_theme_support( 'post-thumbnails', array( 'chapter' ) );
@@ -220,3 +178,5 @@ function add_menu_icons_styles(){
      </style>';
 }
 add_action( 'admin_head', 'add_menu_icons_styles' );
+
+

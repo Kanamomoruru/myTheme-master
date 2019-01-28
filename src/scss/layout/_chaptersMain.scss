@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-size: 1049px 1060px;
     position: relative;
-    height:  100vh;
+    height:  375vh;
     //display: flex;
     flex-direction: column;
     flex-flow: column nowrap;
@@ -166,13 +166,15 @@
         padding: 2rem;
         //display: flex;
         //flex-flow: column wrap;
-        float: right;
+        //float: right;
 
         @include screen-notebook {
             position: relative;
-            top: -100vh;
-            //left: 50vw;
+            top: -110vh;
+            left: 50vw;
           }
+
+          
 
             .post_img {
                 img {
@@ -216,6 +218,23 @@
             }
          // }
     }
+
+    .category1 {
+        position: relative;
+        top: -115.5vh;
+      }
+
+      .category2 {
+        position: relative;
+        top: -120.5vh;
+
+      }
+
+      .category3 {
+        position: relative;
+        top: -125.5vh;
+
+      }
 }
 
 //左から
@@ -239,3 +258,55 @@
     }
   }
   
+
+
+
+
+
+
+  .full_content {
+    max-width:750px;
+    height: 300px;
+    position:relative;
+    margin:10px auto 0;
+    //clear:both;
+}
+.tabmenu{
+    width:5%;
+    //background:#333;
+    //float:left;
+    list-style:none;
+    padding:10px 0 10px;
+    text-align:center;
+    display:block;
+    //cursor: pointer;
+    //color:#FFF;
+    position: relative;
+    top: -39vh;
+    left: 45vw;
+}
+
+.active, .hover {
+    background:#999;
+    color: #000;
+    font-weight:bold;
+}
+
+.tabmenu img:hover { opacity:0.7;
+filter: alpha(opacity=70);
+-ms-filter: "alpha( opacity=70 )";}
+
+.mr01{margin-right:1px;}
+
+.tabcontent {
+    width:100%;
+    margin-top:5%;
+    left:0;
+    position:absolute; 
+}
+
+//.tabcontent .dl{max-width:750px; margin: 20px auto;}
+
+//.tabcontent .dl .dt{padding:0 20px 5px; border-bottom: solid 1px #e2e2e2; margin-bottom:10px;}
+
+//.tab_title{margin-top: 10px; padding: 5px 20px 5px; font-weight: bold; border-bottom: 1px #999 solid;}

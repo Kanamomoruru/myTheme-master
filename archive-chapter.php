@@ -32,7 +32,7 @@
                     </p>
                     <p class="team-more">
                          <a href="<?php the_permalink(); ?>" class="btn blue">
-                              詳しい経歴を見る <span class="lsf">right</span>
+                             
                          </a>
                     </p>
                </div>

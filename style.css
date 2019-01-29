@@ -701,10 +701,25 @@ License URI:
       overflow: hidden; }
       .chapterIntro-header .Slider .chapter_avatar .the-img img {
         width: 250px;
-        height: 350px; }
-    .chapterIntro-header .Slider .chapter_avatar.is-selected img {
-      width: 300px;
-      height: 400px; }
+        height: 350px;
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+        -webkit-transition: all 900ms ease;
+        -o-transition: all 900ms ease;
+        transition: all 900ms ease; }
+    .chapterIntro-header .Slider .chapter_avatar.is-selected .the-img {
+      overflow: hidden; }
+      .chapterIntro-header .Slider .chapter_avatar.is-selected .the-img img {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+        -webkit-transition-delay: 500ms;
+        -o-transition-delay: 500ms;
+        transition-delay: 500ms; }
   .chapterIntro-header .flickity-enabled {
     position: relative; }
   .chapterIntro-header .flickity-enabled:focus {

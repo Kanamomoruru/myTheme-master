@@ -14,6 +14,7 @@
     width: 50%;
     //height: 500vh;
     opacity: 0;
+   
     
     .chapters-list {
       
@@ -55,6 +56,7 @@
         &.is-selected {
           .chapter_info{
           opacity: 1;
+          //transform: translateY(100%);
           transition: opacity .5s ease-out .7s;
           //transform: translateY(100%);
           }
@@ -67,6 +69,8 @@
         img {
           width: 250px;
           height: 350px;
+          transform: translateY(100%);
+          transition: all 900ms ease;
          
           //position: relative;
         }
@@ -77,14 +81,21 @@
       //transform: translateY(100%);
 
       &.is-selected {
-        img {
-          width: 300px;
-          height: 400px;
-        
-          // transform: translateY(90%);
-          // transition: all 600ms ease-out;
-          // transform: scale(1);
+        .the-img {
+          overflow: hidden;
+
+          img {
+            position: relative;
+            width: 300px;
+            height: 400px;
+          
+            transform: translateY(0%);
+				    transition-delay: 500ms;
+          
+          }
+
         }
+        
       }
     }
   }

@@ -16,15 +16,39 @@
         margin-left: 10vw;
 
 
-        .img_box1 {
-           // overflow: hidden;
+        // .img_box1 {
+        //    // overflow: hidden;
 
-            .img-top {
-                width: 80%;
-                background-color: transparent;
-                opacity: 0;
+        //     .img-top {
+        //         width: 80%;
+        //         background-color: transparent;
+        //         opacity: 0;
+        //     }
+        // }
+
+        .img-wrap {
+            overflow: hidden;
+            position: relative;
+          }
+          
+          .img-wrap:before {
+            animation: img-wrap 2s cubic-bezier(.4, 0, .2, 1) forwards;
+            background: #ff0000;
+            bottom: 0;
+            content: '';
+            left: 0;
+            pointer-events: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+          }
+          
+          @keyframes img-wrap {
+            100% {
+              transform: translateX(100%);
             }
-        }
+          }
 
         // #img_box1 {
         //     height: 100%;
@@ -338,6 +362,61 @@
         }
     }
 }
+
+/*スクロールボタンの指定*/
+.scroll{
+    position: absolute;
+    top:70vh;
+    left:20vw;
+    // width: 100%;
+    // bottom: 0;
+    text-align: center;
+    a{
+      position: relative;
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bold;
+      color: #ff0000;
+      text-decoration: none;
+      padding: 0 0 50px;
+      /*矢印を作成する*/
+      &:before{
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: 0;
+        right: 0;
+        bottom: 25px;
+        margin: auto;
+        border-bottom: 2px solid #ff0000;
+        border-right: 2px solid #ff0000;
+        transform: rotate(45deg);
+        animation: move 2s infinite;
+      }
+    }
+  }
+
+  /*矢印をアニメーションする*/
+@keyframes move {
+    0% {
+      transform: rotate(45deg) translate(0, 0);
+    }
+    20% {
+      transform: rotate(45deg) translate(10px, 10px);
+    }
+    40% {
+      transform: rotate(45deg) translate(0, 0);
+    }
+  }
+
+
+
+
+
+
+
+
 
 //左から
 .isPlay1 {

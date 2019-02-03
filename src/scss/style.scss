@@ -1,5 +1,6 @@
 @import "wp.scss";
 @import "layout/navbar",
+"layout/header",
 "layout/intro",
 "layout/mixin",
 "layout/footer",
@@ -17,27 +18,8 @@ body {
     background-color: #fff;
     padding: 0;
     margin: 0;
-    font-family: "Abril Fatface";
+    //font-family: "Abril Fatface";
     height: 100%;
-    //position: relative;
-    //overflow: hidden;
-    //visibility: hidden;
-
-    // @include screen-mobile {
-    //     width: 100%;
-    //     max-width: 320px;
-    // }
+  
 }
 
-//.section {
-//     &.is-show {
-//         .section-content {
-//             opacity: 0;
-//         }
-//     }
-// }
-
-// .section-content {
-//     opacity: 1;
-//     transition: opacity .5s ease .75s;
-// }

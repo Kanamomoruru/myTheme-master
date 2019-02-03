@@ -2,7 +2,7 @@
     <!-- <header class="page-header"> -->
         <div class="head section-content">
             <div class="head_leftside">
-                <div class="img_box1">
+                <div class="img-wrap">
                     <!-- <div class="colorLayer2"></div> -->
                     <!-- <div class="image1"> -->
                         <img class="img-top" src="<?php echo get_template_directory_uri(); ?>/images/topImage.png">
@@ -54,6 +54,8 @@
             </div>
 
             </div>
+
+            <p class="scroll js-scroll"><a href="">SCROLL</a></p>
         </div>
     <!-- </header> -->
 </section>
